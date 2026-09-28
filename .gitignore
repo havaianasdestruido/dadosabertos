@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Scratch output of a run (the committed examples are outputs/ and outputs-replica/,
+# both reproducible with the tools/ scripts)
+/tmp-outputs/
+*.part
+*.part.tmp
+*.tmp
+
+# The offline replica is generated (deterministically) by tests/make_replica.py —
+# it is ~6 MB of synthetic payloads, so it is not versioned. Regenerate it with:
+#     python3 tests/make_replica.py
+tests/replica/

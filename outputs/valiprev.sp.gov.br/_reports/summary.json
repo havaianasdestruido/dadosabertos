@@ -1,0 +1,25 @@
+{
+ "site": "valiprev.sp.gov.br",
+ "url": "https://valiprev.sp.gov.br/uploads/paginas/certidoes/pdf/",
+ "entry_urls": [
+  "https://valiprev.sp.gov.br/uploads/paginas/certidoes/pdf/"
+ ],
+ "title": "",
+ "note": "",
+ "started": "2026-09-28T13:05:52Z",
+ "finished": "2026-09-28T13:05:52Z",
+ "elapsed_s": 0,
+ "listing_pages": 1,
+ "documents_discovered": 53,
+ "documents_fetched": 0,
+ "documents_bytes": 0,
+ "bytes_downloaded_this_run": 0,
+ "duplicates": 0,
+ "duplicate_bytes_collapsed": 0,
+ "candidate_duplicates": 49,
+ "errors": 0,
+ "status_counts": {
+  "dry_run": 53
+ },
+ "dry_run": true
+}

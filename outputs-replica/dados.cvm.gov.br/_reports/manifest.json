@@ -1,0 +1,107 @@
+{
+ "generated_at": "2026-09-28T13:05:53Z",
+ "tool": "indexclone 1.0.0",
+ "summary": {
+  "site": "dados.cvm.gov.br",
+  "url": "https://replica.local/cvm/dados/",
+  "entry_urls": [
+   "https://replica.local/cvm/dados/"
+  ],
+  "title": "Portal Dados Abertos CVM (replica)",
+  "note": "Apache <pre> index with dates and human sizes; 'CIA_ABERTA' and 'FIDC' both publish a 96 KiB 'doc' archive with identical bytes, while 'cia_aberta_fre_2025.zip' has the same size with different content — the deduper must collapse the first pair only.",
+  "started": "2026-09-28T13:05:53Z",
+  "finished": "2026-09-28T13:05:53Z",
+  "elapsed_s": 0.01,
+  "listing_pages": 4,
+  "documents_discovered": 5,
+  "documents_fetched": 5,
+  "documents_bytes": 314368,
+  "bytes_downloaded_this_run": 412672,
+  "duplicates": 1,
+  "duplicate_bytes_collapsed": 98304,
+  "candidate_duplicates": 0,
+  "errors": 0,
+  "status_counts": {
+   "downloaded": 4,
+   "duplicate": 1
+  },
+  "dry_run": false
+ },
+ "files": [
+  {
+   "url": "https://replica.local/cvm/dados/ADM_CART/ADM_CART_CAD_2024.zip",
+   "name": "ADM_CART_CAD_2024.zip",
+   "size": 65536,
+   "remote_mtime": "2025-07-11T18:23:00Z",
+   "status": "downloaded",
+   "local_path": "ADM_CART/ADM_CART_CAD_2024.zip",
+   "sha256": "2bc0e4689387cd29a2c7999be20f3ea07a4263ffde8b9c6ccd85453c7dd82ca9",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "application/zip",
+   "error": null,
+   "duration_s": 0.006
+  },
+  {
+   "url": "https://replica.local/cvm/dados/ADM_CART/ADM_CART_CAD_2025.zip",
+   "name": "ADM_CART_CAD_2025.zip",
+   "size": 52224,
+   "remote_mtime": "2025-07-11T18:23:00Z",
+   "status": "downloaded",
+   "local_path": "ADM_CART/ADM_CART_CAD_2025.zip",
+   "sha256": "7fdb31a1b88731893b737a5585833dceb2b64aa62de20f0e624e91d6cd0b105a",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "application/zip",
+   "error": null,
+   "duration_s": 0.005
+  },
+  {
+   "url": "https://replica.local/cvm/dados/CIA_ABERTA/cia_aberta_doc_2025.zip",
+   "name": "cia_aberta_doc_2025.zip",
+   "size": 98304,
+   "remote_mtime": "2025-08-01T09:12:00Z",
+   "status": "downloaded",
+   "local_path": "CIA_ABERTA/cia_aberta_doc_2025.zip",
+   "sha256": "a92b87949ab070b76c244aa57c51a6c3d033e343e7f5e409a93181440c6b3ccc",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "application/zip",
+   "error": null,
+   "duration_s": 0.007
+  },
+  {
+   "url": "https://replica.local/cvm/dados/CIA_ABERTA/cia_aberta_fre_2025.zip",
+   "name": "cia_aberta_fre_2025.zip",
+   "size": 98304,
+   "remote_mtime": "2025-08-01T09:12:00Z",
+   "status": "downloaded",
+   "local_path": "CIA_ABERTA/cia_aberta_fre_2025.zip",
+   "sha256": "65cbbe3fc39e2263b13be0b03f83c34e393ac3e5d8ca8f5474151d78479c930a",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "application/zip",
+   "error": null,
+   "duration_s": 0.007
+  },
+  {
+   "url": "https://replica.local/cvm/dados/FIDC/fidc_doc_2025.zip",
+   "name": "fidc_doc_2025.zip",
+   "size": 98304,
+   "remote_mtime": "2025-08-01T09:12:00Z",
+   "status": "duplicate",
+   "local_path": "FIDC/fidc_doc_2025.zip",
+   "sha256": "a92b87949ab070b76c244aa57c51a6c3d033e343e7f5e409a93181440c6b3ccc",
+   "dupe_of": "https://replica.local/cvm/dados/CIA_ABERTA/cia_aberta_doc_2025.zip",
+   "dupe_method": "sha256",
+   "http_status": null,
+   "content_type": null,
+   "error": null,
+   "duration_s": null
+  }
+ ]
+}

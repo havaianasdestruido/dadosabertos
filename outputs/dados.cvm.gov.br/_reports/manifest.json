@@ -1,0 +1,48 @@
+{
+ "generated_at": "2026-09-28T13:05:52Z",
+ "tool": "indexclone 1.0.0",
+ "summary": {
+  "site": "dados.cvm.gov.br",
+  "url": "https://dados.cvm.gov.br/dados/",
+  "entry_urls": [
+   "https://dados.cvm.gov.br/dados/",
+   "https://dados.cvm.gov.br/dados/ADM_CART/",
+   "https://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/"
+  ],
+  "title": "",
+  "note": "",
+  "started": "2026-09-28T13:05:52Z",
+  "finished": "2026-09-28T13:05:52Z",
+  "elapsed_s": 0,
+  "listing_pages": 27,
+  "documents_discovered": 1,
+  "documents_fetched": 0,
+  "documents_bytes": 0,
+  "bytes_downloaded_this_run": 0,
+  "duplicates": 0,
+  "duplicate_bytes_collapsed": 0,
+  "candidate_duplicates": 0,
+  "errors": 0,
+  "status_counts": {
+   "dry_run": 1
+  },
+  "dry_run": true
+ },
+ "files": [
+  {
+   "url": "https://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/cad_cia_aberta.csv",
+   "name": "cad_cia_aberta.csv",
+   "size": 1048576,
+   "remote_mtime": "2026-09-28T01:17:00Z",
+   "status": "dry_run",
+   "local_path": null,
+   "sha256": null,
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": null,
+   "error": null,
+   "duration_s": null
+  }
+ ]
+}

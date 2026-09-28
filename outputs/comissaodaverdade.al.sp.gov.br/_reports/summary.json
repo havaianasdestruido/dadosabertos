@@ -1,0 +1,25 @@
+{
+ "site": "comissaodaverdade.al.sp.gov.br",
+ "url": "https://comissaodaverdade.al.sp.gov.br/upload/",
+ "entry_urls": [
+  "https://comissaodaverdade.al.sp.gov.br/upload/"
+ ],
+ "title": "",
+ "note": "",
+ "started": "2026-09-28T13:05:52Z",
+ "finished": "2026-09-28T13:05:52Z",
+ "elapsed_s": 0,
+ "listing_pages": 1,
+ "documents_discovered": 42,
+ "documents_fetched": 0,
+ "documents_bytes": 0,
+ "bytes_downloaded_this_run": 0,
+ "duplicates": 0,
+ "duplicate_bytes_collapsed": 0,
+ "candidate_duplicates": 0,
+ "errors": 0,
+ "status_counts": {
+  "dry_run": 42
+ },
+ "dry_run": true
+}

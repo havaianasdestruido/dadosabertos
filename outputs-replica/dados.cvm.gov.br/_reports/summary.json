@@ -1,0 +1,26 @@
+{
+ "site": "dados.cvm.gov.br",
+ "url": "https://replica.local/cvm/dados/",
+ "entry_urls": [
+  "https://replica.local/cvm/dados/"
+ ],
+ "title": "Portal Dados Abertos CVM (replica)",
+ "note": "Apache <pre> index with dates and human sizes; 'CIA_ABERTA' and 'FIDC' both publish a 96 KiB 'doc' archive with identical bytes, while 'cia_aberta_fre_2025.zip' has the same size with different content — the deduper must collapse the first pair only.",
+ "started": "2026-09-28T13:05:53Z",
+ "finished": "2026-09-28T13:05:53Z",
+ "elapsed_s": 0.01,
+ "listing_pages": 4,
+ "documents_discovered": 5,
+ "documents_fetched": 5,
+ "documents_bytes": 314368,
+ "bytes_downloaded_this_run": 412672,
+ "duplicates": 1,
+ "duplicate_bytes_collapsed": 98304,
+ "candidate_duplicates": 0,
+ "errors": 0,
+ "status_counts": {
+  "downloaded": 4,
+  "duplicate": 1
+ },
+ "dry_run": false
+}

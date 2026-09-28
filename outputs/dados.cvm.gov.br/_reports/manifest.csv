@@ -1,0 +1,2 @@
+url,local_path,name,size,sha256,status,remote_mtime,http_status,content_type,dupe_of,dupe_method,duration_s,error
+https://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/cad_cia_aberta.csv,,cad_cia_aberta.csv,1048576,,dry_run,2026-09-28T01:17:00Z,,,,,,

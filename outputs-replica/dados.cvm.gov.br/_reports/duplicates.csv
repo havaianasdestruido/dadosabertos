@@ -1,0 +1,2 @@
+sha256,size,kept_url,kept_path,duplicate_url,duplicate_path,method,action
+a92b87949ab070b76c244aa57c51a6c3d033e343e7f5e409a93181440c6b3ccc,98304,https://replica.local/cvm/dados/CIA_ABERTA/cia_aberta_doc_2025.zip,CIA_ABERTA/cia_aberta_doc_2025.zip,https://replica.local/cvm/dados/FIDC/fidc_doc_2025.zip,FIDC/fidc_doc_2025.zip,sha256,stored as hardlink

@@ -1,0 +1,7 @@
+url,local_path,name,size,sha256,status,remote_mtime,http_status,content_type,dupe_of,dupe_method,duration_s,error
+https://dadosabertos.pgfn.gov.br/2025_trimestre_04/Dados_abertos_FGTS.zip,,Dados_abertos_FGTS.zip,,,dry_run,,,,,,,
+https://dadosabertos.pgfn.gov.br/2025_trimestre_04/Dados_abertos_Nao_Previdenciario.zip,,Dados_abertos_Nao_Previdenciario.zip,,,dry_run,,,,,,,
+https://dadosabertos.pgfn.gov.br/2025_trimestre_04/Dados_abertos_Previdenciario.zip,,Dados_abertos_Previdenciario.zip,,,dry_run,,,,,,,
+https://dadosabertos.pgfn.gov.br/Dados_abertos_FGTS.zip,,Dados_abertos_FGTS.zip,,,dry_run,,,,,,,
+https://dadosabertos.pgfn.gov.br/Dados_abertos_Nao_Previdenciario.zip,,Dados_abertos_Nao_Previdenciario.zip,,,dry_run,,,,,,,
+https://dadosabertos.pgfn.gov.br/Dados_abertos_Previdenciario.zip,,Dados_abertos_Previdenciario.zip,,,dry_run,,,,,,,

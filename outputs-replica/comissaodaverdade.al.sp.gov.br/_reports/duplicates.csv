@@ -1,0 +1,3 @@
+sha256,size,kept_url,kept_path,duplicate_url,duplicate_path,method,action
+302000e3cd88caf65aaea50f53265ff46a02ec997790d14ae593695a227e600e,90112,https://replica.local/comissao/upload/001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis004.pdf,001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis004.pdf,https://replica.local/comissao/upload/001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis.pdf,001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis.pdf,sha256,stored as hardlink
+c395464b53db3e9b4f1de7b32aee251e38e95236442ad8781680b0de586c00b1,33792,https://replica.local/comissao/upload/001-ArquivoCEMDP-devanir.pdf,001-ArquivoCEMDP-devanir.pdf,https://replica.local/comissao/upload/001-ArquivoCEMDP.pdf,001-ArquivoCEMDP.pdf,sha256,stored as hardlink

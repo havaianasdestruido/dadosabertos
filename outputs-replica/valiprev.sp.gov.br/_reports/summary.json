@@ -1,0 +1,26 @@
+{
+ "site": "valiprev.sp.gov.br",
+ "url": "https://replica.local/valiprev/",
+ "entry_urls": [
+  "https://replica.local/valiprev/"
+ ],
+ "title": "Valiprev — certidões e audiências (replica)",
+ "note": "Apache table dialect: names are truncated in the visible cell and recovered from the link title/URL. The three DISPENSA files share identical bytes (a real pattern on this site).",
+ "started": "2026-09-28T13:05:53Z",
+ "finished": "2026-09-28T13:05:53Z",
+ "elapsed_s": 0.02,
+ "listing_pages": 5,
+ "documents_discovered": 8,
+ "documents_fetched": 8,
+ "documents_bytes": 2237144,
+ "bytes_downloaded_this_run": 2244744,
+ "duplicates": 2,
+ "duplicate_bytes_collapsed": 7600,
+ "candidate_duplicates": 0,
+ "errors": 0,
+ "status_counts": {
+  "downloaded": 6,
+  "duplicate": 2
+ },
+ "dry_run": false
+}

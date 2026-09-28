@@ -1,0 +1,107 @@
+{
+ "generated_at": "2026-09-28T13:05:53Z",
+ "tool": "indexclone 1.0.0",
+ "summary": {
+  "site": "macau.rn.gov.br",
+  "url": "https://replica.local/macau/diario/",
+  "entry_urls": [
+   "https://replica.local/macau/diario/"
+  ],
+  "title": "Diário Oficial de Macau (replica)",
+  "note": "Pure link farm: every href lacks a trailing slash, a date and a size, so each one is probed. Two 2013 editions are byte-identical under different names.",
+  "started": "2026-09-28T13:05:53Z",
+  "finished": "2026-09-28T13:05:53Z",
+  "elapsed_s": 0.01,
+  "listing_pages": 5,
+  "documents_discovered": 5,
+  "documents_fetched": 5,
+  "documents_bytes": 552960,
+  "bytes_downloaded_this_run": 706560,
+  "duplicates": 1,
+  "duplicate_bytes_collapsed": 153600,
+  "candidate_duplicates": 0,
+  "errors": 0,
+  "status_counts": {
+   "downloaded": 4,
+   "duplicate": 1
+  },
+  "dry_run": false
+ },
+ "files": [
+  {
+   "url": "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/01%20-%20Janeiro-2013/macau-2013-01-02.pdf",
+   "name": "macau-2013-01-02.pdf",
+   "size": 153600,
+   "remote_mtime": null,
+   "status": "downloaded",
+   "local_path": "2013 - Diário Oficial de Macau/01 - Janeiro-2013/macau-2013-01-02.pdf",
+   "sha256": "b4183265d26ec127f9a7c25edeb7c217528113140328d06de2445c1fcd65bb67",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "application/pdf",
+   "error": null,
+   "duration_s": 0.006
+  },
+  {
+   "url": "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/01%20-%20Janeiro-2013/macau-2013-01-15.pdf",
+   "name": "macau-2013-01-15.pdf",
+   "size": 133120,
+   "remote_mtime": null,
+   "status": "downloaded",
+   "local_path": "2013 - Diário Oficial de Macau/01 - Janeiro-2013/macau-2013-01-15.pdf",
+   "sha256": "cb7f48ab570ef7a5aa2af97d690b4d9732cef4ec3db17314549c2f464eeaada9",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "application/pdf",
+   "error": null,
+   "duration_s": 0.004
+  },
+  {
+   "url": "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/02%20-%20Fevereiro-2013/macau-2013-02-07.pdf",
+   "name": "macau-2013-02-07.pdf",
+   "size": 133120,
+   "remote_mtime": null,
+   "status": "downloaded",
+   "local_path": "2013 - Diário Oficial de Macau/02 - Fevereiro-2013/macau-2013-02-07.pdf",
+   "sha256": "dd2dc05fab105801a04dcbcc72c922380b7c8e5b70d76f695faedb543e03585c",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "application/pdf",
+   "error": null,
+   "duration_s": 0.006
+  },
+  {
+   "url": "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/03%20-%20Mar%C3%A7o-2013/macau-2013-03-11-edicao-2.pdf",
+   "name": "macau-2013-03-11-edicao-2.pdf",
+   "size": 153600,
+   "remote_mtime": null,
+   "status": "duplicate",
+   "local_path": "2013 - Diário Oficial de Macau/03 - Março-2013/macau-2013-03-11-edicao-2.pdf",
+   "sha256": "b4183265d26ec127f9a7c25edeb7c217528113140328d06de2445c1fcd65bb67",
+   "dupe_of": "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/01%20-%20Janeiro-2013/macau-2013-01-02.pdf",
+   "dupe_method": "sha256",
+   "http_status": null,
+   "content_type": null,
+   "error": null,
+   "duration_s": null
+  },
+  {
+   "url": "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/03%20-%20Mar%C3%A7o-2013/macau-2013-03-11.pdf",
+   "name": "macau-2013-03-11.pdf",
+   "size": 133120,
+   "remote_mtime": null,
+   "status": "downloaded",
+   "local_path": "2013 - Diário Oficial de Macau/03 - Março-2013/macau-2013-03-11.pdf",
+   "sha256": "57020e8f4672b250230379466831e1400267d04736c4463425b877dd9e0001e6",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "application/pdf",
+   "error": null,
+   "duration_s": 0.008
+  }
+ ]
+}

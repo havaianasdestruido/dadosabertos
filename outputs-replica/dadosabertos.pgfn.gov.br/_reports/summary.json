@@ -1,0 +1,26 @@
+{
+ "site": "dadosabertos.pgfn.gov.br",
+ "url": "https://replica.local/pgfn/",
+ "entry_urls": [
+  "https://replica.local/pgfn/"
+ ],
+ "title": "Dados Abertos PGFN (replica)",
+ "note": "Bullet-style index without sizes: the crawler decides file-vs-directory by probing. The FGTS archive is repeated in every quarter -> collapsed by the byte probe.",
+ "started": "2026-09-28T13:05:53Z",
+ "finished": "2026-09-28T13:05:53Z",
+ "elapsed_s": 0.03,
+ "listing_pages": 4,
+ "documents_discovered": 7,
+ "documents_fetched": 7,
+ "documents_bytes": 1105920,
+ "bytes_downloaded_this_run": 1105920,
+ "duplicates": 3,
+ "duplicate_bytes_collapsed": 1064960,
+ "candidate_duplicates": 0,
+ "errors": 0,
+ "status_counts": {
+  "downloaded": 4,
+  "duplicate": 3
+ },
+ "dry_run": false
+}

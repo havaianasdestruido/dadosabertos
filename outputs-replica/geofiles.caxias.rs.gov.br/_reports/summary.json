@@ -1,0 +1,25 @@
+{
+ "site": "geofiles.caxias.rs.gov.br",
+ "url": "https://replica.local/caxias/",
+ "entry_urls": [
+  "https://replica.local/caxias/"
+ ],
+ "title": "Geofiles Caxias do Sul — quadras (replica)",
+ "note": "nginx autoindex keeps the literal '..' anchor; directories are reached through a 301 redirect to the trailing-slash URL.",
+ "started": "2026-09-28T13:05:53Z",
+ "finished": "2026-09-28T13:05:53Z",
+ "elapsed_s": 0.01,
+ "listing_pages": 5,
+ "documents_discovered": 6,
+ "documents_fetched": 6,
+ "documents_bytes": 493920,
+ "bytes_downloaded_this_run": 493920,
+ "duplicates": 0,
+ "duplicate_bytes_collapsed": 0,
+ "candidate_duplicates": 0,
+ "errors": 0,
+ "status_counts": {
+  "downloaded": 6
+ },
+ "dry_run": false
+}
