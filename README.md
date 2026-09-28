@@ -34,8 +34,11 @@ On a machine with normal internet access the only change is the config — there
 is no sandbox-specific logic in the scraper:
 
 ```bash
-python3 scraper.py --config sites.json --all --out outputs      # the real thing
+python3 scraper.py --config sites.json --all --dry-run          # see what it would fetch
+python3 scraper.py --config sites.json --all --out mirror       # the real thing
 ```
+
+(`--out mirror` so the committed examples in `outputs/` are not overwritten.)
 
 `geofiles.caxias.rs.gov.br` could not be read at all from this sandbox (two
 attempts, with and without `?C=N;O=A`), so no listing was captured for it and
