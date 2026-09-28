@@ -6,6 +6,7 @@ venv/
 
 # Scratch output of a run (the committed examples are outputs/ and outputs-replica/,
 # both reproducible with the tools/ scripts)
+/outputs-replica-demo/
 /tmp-outputs/
 *.part
 *.part.tmp

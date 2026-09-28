@@ -3,9 +3,9 @@
   "https://replica.local/cvm/dados/ADM_CART/ADM_CART_CAD_2024.zip": {
    "content_type": "application/zip",
    "etag": null,
-   "fetched_at": "2026-09-28T13:07:21Z",
+   "fetched_at": "2026-09-28T17:33:18Z",
    "head": "2bc0e4689387cd29a2c7999be20f3ea07a4263ffde8b9c6ccd85453c7dd82ca9",
-   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
+   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
    "listed_size": 65536,
    "local_path": "ADM_CART/ADM_CART_CAD_2024.zip",
    "name": "ADM_CART_CAD_2024.zip",
@@ -17,9 +17,9 @@
   "https://replica.local/cvm/dados/ADM_CART/ADM_CART_CAD_2025.zip": {
    "content_type": "application/zip",
    "etag": null,
-   "fetched_at": "2026-09-28T13:07:21Z",
+   "fetched_at": "2026-09-28T17:33:18Z",
    "head": "7fdb31a1b88731893b737a5585833dceb2b64aa62de20f0e624e91d6cd0b105a",
-   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
+   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
    "listed_size": 52224,
    "local_path": "ADM_CART/ADM_CART_CAD_2025.zip",
    "name": "ADM_CART_CAD_2025.zip",
@@ -31,9 +31,9 @@
   "https://replica.local/cvm/dados/CIA_ABERTA/cia_aberta_doc_2025.zip": {
    "content_type": "application/zip",
    "etag": null,
-   "fetched_at": "2026-09-28T13:07:21Z",
+   "fetched_at": "2026-09-28T17:33:18Z",
    "head": "7855e887d7a37d027cd1fc8b1d8db6d2743e929df7b96893d66882257b91b973",
-   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
+   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
    "listed_size": 98304,
    "local_path": "CIA_ABERTA/cia_aberta_doc_2025.zip",
    "name": "cia_aberta_doc_2025.zip",
@@ -45,9 +45,9 @@
   "https://replica.local/cvm/dados/CIA_ABERTA/cia_aberta_fre_2025.zip": {
    "content_type": "application/zip",
    "etag": null,
-   "fetched_at": "2026-09-28T13:07:21Z",
+   "fetched_at": "2026-09-28T17:33:18Z",
    "head": "d8caa1fe5bc088c94af191cf844e07b2bc9fbbe4ab077e4489bb040e7329710f",
-   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
+   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
    "listed_size": 98304,
    "local_path": "CIA_ABERTA/cia_aberta_fre_2025.zip",
    "name": "cia_aberta_fre_2025.zip",
@@ -59,7 +59,7 @@
   "https://replica.local/cvm/dados/FIDC/fidc_doc_2025.zip": {
    "dedupe_method": "sha256",
    "duplicate_of": "https://replica.local/cvm/dados/CIA_ABERTA/cia_aberta_doc_2025.zip",
-   "fetched_at": "2026-09-28T13:07:21Z",
+   "fetched_at": "2026-09-28T17:33:18Z",
    "listed_size": 98304,
    "local_path": "FIDC/fidc_doc_2025.zip",
    "name": "fidc_doc_2025.zip",
@@ -69,5 +69,5 @@
   }
  },
  "site": "dados.cvm.gov.br",
- "updated": "2026-09-28T13:07:21Z"
+ "updated": "2026-09-28T17:33:18Z"
 }

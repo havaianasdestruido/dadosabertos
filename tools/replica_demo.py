@@ -35,7 +35,10 @@ REPLICA_DIR = os.path.join(ROOT, "tests", "replica")
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="run the six-site replica demo")
-    ap.add_argument("--out", default=os.path.join(ROOT, "outputs-replica"))
+    # a fresh default: running the demo must download the replica documents, not
+    # resume a populated mirror (pass --out outputs-replica to reproduce the
+    # committed example folder)
+    ap.add_argument("--out", default=os.path.join(ROOT, "outputs-replica-demo"))
     ap.add_argument("--jobs", type=int, default=4)
     ap.add_argument("--rate", type=float, default=0.0)
     ap.add_argument("--second-run", action="store_true",
@@ -57,19 +60,24 @@ def main(argv=None) -> int:
                              "--jobs", str(args.jobs), "--rate", str(args.rate),
                              "--rewrite", rewrite])
         if args.second_run:
-            print("\n--- second run (should download nothing) ---")
+            print("\n--- second run (must download nothing) ---")
             again = os.path.join(tmp, "second")
             shutil.copytree(args.out, again)
-            scraper.main(["--config", cfg, "--all", "--out", again,
-                          "--jobs", str(args.jobs), "--rate", str(args.rate),
-                          "--rewrite", rewrite])
+            second_code = scraper.main(["--config", cfg, "--all", "--out", again,
+                                        "--jobs", str(args.jobs), "--rate", str(args.rate),
+                                        "--rewrite", rewrite])
             total = 0
             for slug in os.listdir(again):
                 path = os.path.join(again, slug, "_reports", "summary.json")
                 if os.path.exists(path):
                     with open(path, encoding="utf-8") as fh:
                         total += int(json.load(fh).get("bytes_downloaded_this_run") or 0)
-            print("second run downloaded {} bytes in total".format(total))
+            print("second run downloaded {} bytes in total (exit {})".format(
+                total, second_code))
+            code = code or second_code
+            if total:
+                print("FAILED: the second run was supposed to be a no-op")
+                code = code or 1
     finally:
         httpd.shutdown()
         httpd.server_close()

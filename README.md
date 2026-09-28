@@ -26,7 +26,7 @@ platform's page reader** on 2026-09-28. Concretely:
 | what | where | how it was produced |
 | --- | --- | --- |
 | real listing inventory: 127 documents with their published names, sizes and dates | `outputs/<slug>/` | `python3 tools/snapshot_inventory.py` — crawls the captured listing pages (offline) |
-| full run, real bytes over HTTP: download → hash → dedupe → hardlink → report → resume | `outputs-replica/<slug>/` | `python3 tools/replica_demo.py --second-run` |
+| full run, real bytes over HTTP: download → hash → dedupe → hardlink → report → resume | `outputs-replica/<slug>/` | `python3 tools/replica_demo.py --second-run --out outputs-replica` (without `--out` the demo uses `outputs-replica-demo/`) |
 | listing captures (verbatim names/dates/sizes) | `tests/fixtures/real/*.tsv` | read from the five reachable sites; see that folder's README for coverage |
 | offline replica of the six dialects | generated (git-ignored) | `python3 tests/make_replica.py` |
 
@@ -102,10 +102,17 @@ accounted for in a row.
 1. Every stored file gets a full **SHA-256**, plus head/tail fingerprints of the
    first and last 64 KiB.
 2. Before downloading a file whose **listed size** matches something already
-   stored, the crawler sends two single-range requests (64 KiB each). Identical
-   head *and* tail ⇒ same document ⇒ the body is never fetched
-   (`"method": "range-probe"`). Servers that ignore `Range` fall back to a
-   normal download, so no correctness depends on it.
+   stored, the crawler sends two single-range requests (64 KiB each) and treats
+   an identical head *and* tail as **a strong heuristic that the documents are
+   the same** — not as proof. Two files of the same size can differ only in the
+   middle, which the probe cannot see; the collapse is therefore recorded with
+   `"method": "range-probe"` in `duplicates.csv`/`state.json` so it can be
+   audited, and `--no-range-probe` disables the shortcut entirely. With it off,
+   every candidate is downloaded once and compared by its **full-content
+   SHA-256**, which is the only exact identity check the tool performs (and the
+   only way to be sure the stored copy is byte-identical to its twin). Servers
+   that ignore `Range` fall back to a normal download, so no correctness
+   depends on the probe.
 3. Downloads that share a size are serialised (`_size_gate`), so a duplicate can
    never be fetched twice concurrently before the index is updated.
 4. Whatever survives step 2/3 is hashed and, if the hash is already known, not
@@ -118,7 +125,10 @@ Measured on the replica (`outputs-replica`): 39 documents, 5.1 MiB downloaded,
 9 duplicates collapsed, 1.4 MiB never fetched — the three PGFN archives were
 recognised with **two 64 KiB range requests each instead of a full re-download**
 and stored as hard links (one inode, verified in the test suite). A second run
-over an unchanged tree downloads **0 bytes** and removes nothing.
+over an unchanged tree downloads **0 bytes** and removes nothing. The one
+transparent risk of the probe is a same-size pair differing only in the middle:
+`duplicates.csv` names the method for every collapse, so those rows are the ones
+to re-check with `--no-range-probe` when byte-exactness matters.
 
 ## Politeness and housekeeping
 
@@ -135,7 +145,7 @@ over an unchanged tree downloads **0 bytes** and removes nothing.
 ## Tests
 
 ```bash
-python3 tests/run_tests.py -v          # 38 tests, no network access needed
+python3 tests/run_tests.py -v          # 44 tests, no network access needed
 ```
 
 * `TestHelpers` — URL canonicalisation (sort links, `?SA`-style parameters,
@@ -146,13 +156,16 @@ python3 tests/run_tests.py -v          # 38 tests, no network access needed
   bullet links with and without metadata (PGFN), link farm (Macau), nginx
   autoindex (Caxias), OpenDataSoft file list (Comissão), scope enforcement and
   the dry-run candidate heuristic.
+* `TestConfigDefaults` — `defaults` fills only the keys a site did not set, and
+  an explicit `0`/`false` is a value, not "unset".
 * `TestEndToEnd` — starts the replica over HTTP and drives `scraper.main()`:
   first run, duplicates (range probe and SHA-256), hardlink inode equality,
   "same size ≠ same bytes", second run is a no-op that deletes nothing,
   resume after a deletion, `--refresh`, `--dupe-strategy report`, `--dry-run`
   (a full inventory with candidate pairs, no payload), limit flags, `--include`
   and `--exclude` (the latter prunes whole subtrees, the former never stops the
-  walk), dead links.
+  walk), the total byte budget being charged exactly once, index pages that try
+  to escape `_index/pages/` via `..` segments, `--rerun-hint`, dead links.
 * `TestRobotsAndErrors` — robots-disallowed URLs are recorded and skipped (and
   downloaded with `--ignore-robots`), 404s are reported without aborting.
 * `TestProductionConfig` — `sites.json` really lists the six requested
@@ -172,6 +185,11 @@ single-range `206` support and an access log the tests assert on.
 * A document is only re-downloaded when the listing's size/date changed (or with
   `--refresh`). Listings that publish nothing about a file therefore rely on
   `--refresh` to notice an in-place replacement.
+* The pre-download range probe compares the first and last 64 KiB only. It is a
+  heuristic for same-size republications (the common case on these portals), not
+  a proof: use `--no-range-probe` when every stored file must be verified by its
+  full-content digest, at the cost of downloading the duplicates it would have
+  skipped.
 * The `dados.cvm.gov.br` and `macau.rn.gov.br` trees are very large; slice them
   with `--max-depth`, `--include`, `--max-file-bytes` or `--max-total-bytes`
   before a first full run — the manifest records every skip with its reason.

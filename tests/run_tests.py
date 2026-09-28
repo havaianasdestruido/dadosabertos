@@ -149,6 +149,36 @@ class TestHelpers(unittest.TestCase):
         self.assertEqual(scraper.Fetcher._parse_robots("User-agent: *\nAllow: /\n"), [])
 
 
+class TestConfigDefaults(unittest.TestCase):
+    def test_defaults_reach_keys_the_site_did_not_set(self):
+        sites, defaults = scraper.load_config(os.path.join(ROOT, "sites.json"))
+        self.assertEqual(len(sites), 6)
+        self.assertEqual(defaults.get("max_depth"), 4)
+        # every site spells out its own depth, so `defaults` must not touch them
+        self.assertEqual([s.max_depth for s in sites], [3, 2, 4, 3, 2, 5])
+
+    def test_zero_and_false_configured_values_are_real_values(self):
+        sites, _ = scraper.load_config(_write_config({
+            "defaults": {"max_depth": 7, "follow_external": True},
+            "sites": [{"slug": "a", "url": "https://a.gov/"},
+                      {"slug": "b", "url": "https://b.gov/", "max_depth": 0,
+                       "follow_external": False}]}))
+        by_slug = {s.slug: s for s in sites}
+        self.assertEqual(by_slug["a"].max_depth, 7)          # filled from defaults
+        self.assertTrue(by_slug["a"].follow_external)
+        self.assertEqual(by_slug["b"].max_depth, 0)          # explicit 0 survives
+        self.assertFalse(by_slug["b"].follow_external)
+        # ... and by_slug["b"] keeps it through a second merge
+        self.assertEqual(by_slug["b"].merged({"max_depth": 9}).max_depth, 0)
+
+
+def _write_config(payload: dict) -> str:
+    path = os.path.join(tempfile.mkdtemp(prefix="indexclone-cfg-"), "sites.json")
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(payload, fh)
+    return path
+
+
 # ==========================================================================
 # the production config shipped with the repo
 # ==========================================================================
@@ -558,6 +588,62 @@ class TestEndToEnd(unittest.TestCase):
         with open(os.path.join(out, slug, "_reports", "manifest.csv"), encoding="utf-8") as fh:
             return list(csvmod.DictReader(fh))
 
+    def test_11b_index_pages_cannot_escape_the_output_folder(self):
+        # a listing URL whose path contains percent-encoded dot segments decodes to
+        # '..' after rel_dir_for(); the audit-page writer must neutralise it
+        site = scraper.SiteConfig(slug="escape", url="https://escape.local/dir/")
+        cloner = scraper.SiteCloner(site=site, out_root=os.path.join(self.tmp, "escape-root"),
+                                    fetcher=scraper.Fetcher(rate=0),
+                                    dedup=scraper.DedupIndex())
+        cloner._save_index_page("https://escape.local/%2e%2e/%2e%2e/pwned/", "<html>x</html>")
+        written = []
+        for dirpath, _, names in os.walk(os.path.join(self.tmp, "escape-root")):
+            written += [os.path.join(dirpath, n) for n in names]
+        self.assertTrue(written, "the page should still be stored somewhere")
+        pages = os.path.join(cloner.index_root, "pages")
+        for path in written:
+            self.assertEqual(os.path.commonpath([pages, os.path.realpath(path)]),
+                             os.path.realpath(pages))
+        self.assertFalse(os.path.exists(os.path.join(self.tmp, "pwned")))
+        self.assertEqual(cloner.errors, [])          # neutralised, not refused
+
+    def test_11c_escaped_index_page_is_refused_when_sanitising_cannot_save_it(self):
+        # belt and braces: if a traversal ever survived sanitisation, the write is
+        # refused instead of leaving the pages root (simulated here by disabling
+        # sanitisation and feeding a path that walks up two levels)
+        site = scraper.SiteConfig(slug="escape2", url="https://escape.local/dir/")
+        cloner = scraper.SiteCloner(site=site, out_root=os.path.join(self.tmp, "escape-root2"),
+                                    fetcher=scraper.Fetcher(rate=0),
+                                    dedup=scraper.DedupIndex())
+        keep = (scraper.rel_dir_for, scraper.sanitize_component)
+        scraper.rel_dir_for = lambda url, base: "../../pwned2"
+        scraper.sanitize_component = lambda name, max_len=180: name     # passthrough
+        try:
+            cloner._save_index_page("https://escape.local/dir/page.html", "<html>x</html>")
+        finally:
+            scraper.rel_dir_for, scraper.sanitize_component = keep
+        stored = [os.path.join(d, n)
+                  for d, _, names in os.walk(os.path.join(self.tmp, "escape-root2"))
+                  for n in names]
+        self.assertEqual(stored, [], stored)
+        self.assertFalse(os.path.exists(os.path.join(self.tmp, "pwned2")))
+        self.assertEqual([e["stage"] for e in cloner.errors], ["index-page"])
+        self.assertEqual(cloner.errors[0]["error"], "path escapes the pages root")
+
+    def test_11d_total_byte_budget_is_charged_once(self):
+        # the cap used to be charged twice (reservation + per-chunk), so a run
+        # stopped at half of it; the replica payloads are ~5.1 MiB in total
+        out = os.path.join(self.tmp, "out-budget")
+        self.run_cli(["--max-total-bytes", "200000"], out=out)
+        total = 0
+        for slug in os.listdir(out):
+            path = os.path.join(out, slug, "_reports", "summary.json")
+            if os.path.exists(path):
+                with open(path, encoding="utf-8") as fh:
+                    total += int(json.load(fh)["bytes_downloaded_this_run"])
+        self.assertLessEqual(total, 200000)
+        self.assertGreater(total, 150000, "the cap must not fire at half of itself")
+
     def test_12_include_filter_keeps_folders_traversable(self):
         # regression: --include must only filter documents, never prune the walk
         out = os.path.join(self.tmp, "out-include")
@@ -571,6 +657,17 @@ class TestEndToEnd(unittest.TestCase):
         self.assertTrue(os.path.exists(os.path.join(
             out, "geofiles.caxias.rs.gov.br", "files", "pub", "quadras", "46",
             "quadra_46.dwg")))
+
+    def test_12b_rerun_hint_replaces_the_actual_argv_in_the_readme(self):
+        out = os.path.join(self.tmp, "out-hint")
+        hint = "python3 scraper.py --config sites.json --site {slug}   # real crawl"
+        self.run_cli(["--site", "dados.cvm.gov.br", "--rerun-hint", hint], out=out)
+        readme = read(os.path.join(out, "dados.cvm.gov.br", "README.md"))
+        self.assertIn("python3 scraper.py --config sites.json --site dados.cvm.gov.br",
+                      readme)
+        self.assertNotIn("{slug}", readme)
+        # the wrapper's own temp config must not leak into the instruction
+        self.assertNotIn(self.config, readme)
 
     def test_13_exclude_filter_prunes_a_subtree(self):
         out = os.path.join(self.tmp, "out-exclude")

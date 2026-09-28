@@ -59,6 +59,7 @@ def main(argv=None) -> int:
     ap.add_argument("--keep-snapshot", action="store_true",
                     help="keep the rendered snapshot tree next to the output")
     args = ap.parse_args(argv)
+    rel_out = os.path.relpath(args.out, ROOT)
 
     tmp = tempfile.mkdtemp(prefix="indexclone-snapshots-")
     try:
@@ -73,8 +74,15 @@ def main(argv=None) -> int:
         for site in sites:
             rewrites += ["--rewrite", "https://{}/={}/{}/".format(
                 site["slug"], base.rstrip("/"), site["slug"])]
+        runnable = ("python3 scraper.py --config sites.json --site {slug}    "
+                    "# the real crawl (needs internet; downloads the documents)\n"
+                    "python3 tools/snapshot_inventory.py --out " + rel_out +
+                    "    # rebuild this offline inventory")
         args_list = ["--config", cfg_path, "--all", "--out", args.out,
                      "--jobs", str(args.jobs), "--rate", str(args.rate), "--dry-run",
+                     # 0 = the captured listing pages only; passed explicitly so the
+                     # scope does not depend on how the loader merges `defaults`
+                     "--max-depth", "0", "--rerun-hint", runnable,
                      "--quiet"] + rewrites
         print("serving the snapshot tree at {}".format(base))
         code = scraper.main(args_list)

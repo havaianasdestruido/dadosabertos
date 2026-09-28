@@ -3,9 +3,9 @@
   "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/01%20-%20Janeiro-2013/macau-2013-01-02.pdf": {
    "content_type": "application/pdf",
    "etag": null,
-   "fetched_at": "2026-09-28T13:07:21Z",
+   "fetched_at": "2026-09-28T17:33:17Z",
    "head": "baf66598a1da52eb243be23c6c3b814f474f4a589b59e8f20a04d295b10997e3",
-   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
+   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
    "listed_size": null,
    "local_path": "2013 - Di\u00e1rio Oficial de Macau/01 - Janeiro-2013/macau-2013-01-02.pdf",
    "name": "macau-2013-01-02.pdf",
@@ -17,9 +17,9 @@
   "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/01%20-%20Janeiro-2013/macau-2013-01-15.pdf": {
    "content_type": "application/pdf",
    "etag": null,
-   "fetched_at": "2026-09-28T13:07:21Z",
+   "fetched_at": "2026-09-28T17:33:17Z",
    "head": "1af2d485e54f13f6d0d42449ae6c948c709eab40b661b3245447360cb7b9efec",
-   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
+   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
    "listed_size": null,
    "local_path": "2013 - Di\u00e1rio Oficial de Macau/01 - Janeiro-2013/macau-2013-01-15.pdf",
    "name": "macau-2013-01-15.pdf",
@@ -31,9 +31,9 @@
   "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/02%20-%20Fevereiro-2013/macau-2013-02-07.pdf": {
    "content_type": "application/pdf",
    "etag": null,
-   "fetched_at": "2026-09-28T13:07:21Z",
+   "fetched_at": "2026-09-28T17:33:17Z",
    "head": "4689057b9da31f208ff8bbe7189b12b3e0ff84ba181e8498b6fed53977f69c6b",
-   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
+   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
    "listed_size": null,
    "local_path": "2013 - Di\u00e1rio Oficial de Macau/02 - Fevereiro-2013/macau-2013-02-07.pdf",
    "name": "macau-2013-02-07.pdf",
@@ -45,7 +45,7 @@
   "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/03%20-%20Mar%C3%A7o-2013/macau-2013-03-11-edicao-2.pdf": {
    "dedupe_method": "sha256",
    "duplicate_of": "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/01%20-%20Janeiro-2013/macau-2013-01-02.pdf",
-   "fetched_at": "2026-09-28T13:07:21Z",
+   "fetched_at": "2026-09-28T17:33:17Z",
    "listed_size": null,
    "local_path": "2013 - Di\u00e1rio Oficial de Macau/03 - Mar\u00e7o-2013/macau-2013-03-11-edicao-2.pdf",
    "name": "macau-2013-03-11-edicao-2.pdf",
@@ -56,9 +56,9 @@
   "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/03%20-%20Mar%C3%A7o-2013/macau-2013-03-11.pdf": {
    "content_type": "application/pdf",
    "etag": null,
-   "fetched_at": "2026-09-28T13:07:21Z",
+   "fetched_at": "2026-09-28T17:33:17Z",
    "head": "3ce3dea235bfeb401438fbf789341dddc8525d2c148a5fe6652005afb07dac06",
-   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
+   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
    "listed_size": null,
    "local_path": "2013 - Di\u00e1rio Oficial de Macau/03 - Mar\u00e7o-2013/macau-2013-03-11.pdf",
    "name": "macau-2013-03-11.pdf",
@@ -69,5 +69,5 @@
   }
  },
  "site": "macau.rn.gov.br",
- "updated": "2026-09-28T13:07:21Z"
+ "updated": "2026-09-28T17:33:17Z"
 }

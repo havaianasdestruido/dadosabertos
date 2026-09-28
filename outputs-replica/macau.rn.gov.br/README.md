@@ -2,7 +2,7 @@
 
 * source listing: <https://replica.local/macau/diario/>
 * output folder: `macau.rn.gov.br`
-* cloned at: 2026-09-28T13:07:21Z
+* cloned at: 2026-09-28T17:33:17Z
 * documents discovered: **5** (5 fetched this run, 540.0 KiB unique bytes stored)
 * downloaded in this run: 690.0 KiB
 * duplicates collapsed: **1** (150.0 KiB)
@@ -24,5 +24,5 @@ Pure link farm: every href lacks a trailing slash, a date and a size, so each on
 Re-run / resume with:
 
 ```bash
-python3 scraper.py --config /tmp/indexclone-demo-8hwai92t/replica_sites.json --site macau.rn.gov.br --out outputs-replica --jobs 4 --rate 0.0 --rewrite https://replica.local/=http://127.0.0.1:39505/ --dupe-strategy hardlink
+python3 scraper.py --config /tmp/indexclone-demo-smkzvh4k/replica_sites.json --site macau.rn.gov.br --out outputs-replica --jobs 4 --rate 0.0 --rewrite https://replica.local/=http://127.0.0.1:40539/ --dupe-strategy hardlink
 ```

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-28T13:07:21Z",
+ "generated_at": "2026-09-28T17:33:18Z",
  "tool": "indexclone 1.0.0",
  "summary": {
   "site": "comissaodaverdade.al.sp.gov.br",
@@ -9,9 +9,9 @@
   ],
   "title": "Comissão da Verdade ALESP — acervo (replica)",
   "note": "Links without metadata; content-identical documents appear under different names ('001-ArquivoCEMDP.pdf' vs '...-devanir.pdf'), which is exactly what the SHA-256 deduper is for.",
-  "started": "2026-09-28T13:07:21Z",
-  "finished": "2026-09-28T13:07:21Z",
-  "elapsed_s": 0.01,
+  "started": "2026-09-28T17:33:17Z",
+  "finished": "2026-09-28T17:33:18Z",
+  "elapsed_s": 0.02,
   "listing_pages": 1,
   "documents_discovered": 8,
   "documents_fetched": 8,
@@ -41,7 +41,7 @@
    "http_status": null,
    "content_type": "application/pdf",
    "error": null,
-   "duration_s": 0.003
+   "duration_s": 0.005
   },
   {
    "url": "https://replica.local/comissao/upload/001-Antonio-Raymundo-Lucena.pdf",
@@ -56,7 +56,7 @@
    "http_status": null,
    "content_type": "application/pdf",
    "error": null,
-   "duration_s": 0.004
+   "duration_s": 0.003
   },
   {
    "url": "https://replica.local/comissao/upload/001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis.pdf",
@@ -71,7 +71,7 @@
    "http_status": null,
    "content_type": "application/pdf",
    "error": null,
-   "duration_s": 0.004
+   "duration_s": 0.007
   },
   {
    "url": "https://replica.local/comissao/upload/001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis004.pdf",
@@ -93,30 +93,30 @@
    "name": "001-ArquivoCEMDP-devanir.pdf",
    "size": 33792,
    "remote_mtime": null,
-   "status": "duplicate",
-   "local_path": "001-ArquivoCEMDP-devanir.pdf",
-   "sha256": "c395464b53db3e9b4f1de7b32aee251e38e95236442ad8781680b0de586c00b1",
-   "dupe_of": "https://replica.local/comissao/upload/001-ArquivoCEMDP.pdf",
-   "dupe_method": "sha256",
-   "http_status": null,
-   "content_type": null,
-   "error": null,
-   "duration_s": null
-  },
-  {
-   "url": "https://replica.local/comissao/upload/001-ArquivoCEMDP.pdf",
-   "name": "001-ArquivoCEMDP.pdf",
-   "size": 33792,
-   "remote_mtime": null,
    "status": "downloaded",
-   "local_path": "001-ArquivoCEMDP.pdf",
+   "local_path": "001-ArquivoCEMDP-devanir.pdf",
    "sha256": "c395464b53db3e9b4f1de7b32aee251e38e95236442ad8781680b0de586c00b1",
    "dupe_of": null,
    "dupe_method": null,
    "http_status": null,
    "content_type": "application/pdf",
    "error": null,
-   "duration_s": 0.003
+   "duration_s": 0.006
+  },
+  {
+   "url": "https://replica.local/comissao/upload/001-ArquivoCEMDP.pdf",
+   "name": "001-ArquivoCEMDP.pdf",
+   "size": 33792,
+   "remote_mtime": null,
+   "status": "duplicate",
+   "local_path": "001-ArquivoCEMDP.pdf",
+   "sha256": "c395464b53db3e9b4f1de7b32aee251e38e95236442ad8781680b0de586c00b1",
+   "dupe_of": "https://replica.local/comissao/upload/001-ArquivoCEMDP-devanir.pdf",
+   "dupe_method": "sha256",
+   "http_status": null,
+   "content_type": null,
+   "error": null,
+   "duration_s": null
   },
   {
    "url": "https://replica.local/comissao/upload/001-CartaLilianRuggia1.jpg",
@@ -131,7 +131,7 @@
    "http_status": null,
    "content_type": "image/jpeg",
    "error": null,
-   "duration_s": 0.007
+   "duration_s": 0.008
   },
   {
    "url": "https://replica.local/comissao/upload/001-Certidao-de-casamento.pdf",

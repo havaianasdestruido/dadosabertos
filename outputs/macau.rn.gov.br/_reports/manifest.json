@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-28T13:07:44Z",
+ "generated_at": "2026-09-28T17:33:17Z",
  "tool": "indexclone 1.0.0",
  "summary": {
   "site": "macau.rn.gov.br",
@@ -11,10 +11,10 @@
   ],
   "title": "",
   "note": "",
-  "started": "2026-09-28T13:07:44Z",
-  "finished": "2026-09-28T13:07:44Z",
+  "started": "2026-09-28T17:33:17Z",
+  "finished": "2026-09-28T17:33:17Z",
   "elapsed_s": 0,
-  "listing_pages": 27,
+  "listing_pages": 3,
   "documents_discovered": 8,
   "documents_fetched": 0,
   "documents_bytes": 0,

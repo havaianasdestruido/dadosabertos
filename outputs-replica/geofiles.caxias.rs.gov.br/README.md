@@ -2,7 +2,7 @@
 
 * source listing: <https://replica.local/caxias/>
 * output folder: `geofiles.caxias.rs.gov.br`
-* cloned at: 2026-09-28T13:07:21Z
+* cloned at: 2026-09-28T17:33:17Z
 * documents discovered: **6** (6 fetched this run, 482.3 KiB unique bytes stored)
 * downloaded in this run: 482.3 KiB
 * duplicates collapsed: **0** (0 B)
@@ -24,5 +24,5 @@ nginx autoindex keeps the literal '..' anchor; directories are reached through a
 Re-run / resume with:
 
 ```bash
-python3 scraper.py --config /tmp/indexclone-demo-8hwai92t/replica_sites.json --site geofiles.caxias.rs.gov.br --out outputs-replica --jobs 4 --rate 0.0 --rewrite https://replica.local/=http://127.0.0.1:39505/ --dupe-strategy hardlink
+python3 scraper.py --config /tmp/indexclone-demo-smkzvh4k/replica_sites.json --site geofiles.caxias.rs.gov.br --out outputs-replica --jobs 4 --rate 0.0 --rewrite https://replica.local/=http://127.0.0.1:40539/ --dupe-strategy hardlink
 ```

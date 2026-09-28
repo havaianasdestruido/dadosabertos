@@ -72,7 +72,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from collections import OrderedDict, deque
-from typing import Dict, List, Optional, Sequence, Tuple
+from typing import Dict, List, Optional, Sequence, Set, Tuple
 
 __version__ = "1.0.0"
 
@@ -787,11 +787,18 @@ class SiteConfig:
     exclude: Optional[str] = None
     follow_external: bool = False
     note: str = ""
+    # the keys the config file spelled out for this site: a real 0/False counts
+    # as a value, so `defaults` must not overwrite it (and must be usable at all)
+    explicit: Set[str] = dataclasses.field(default_factory=set, compare=False, repr=False)
 
     @classmethod
     def from_dict(cls, data: Dict[str, object]) -> "SiteConfig":
-        known = {f.name for f in dataclasses.fields(cls)}
-        return cls(**{k: v for k, v in data.items() if k in known})  # type: ignore[arg-type]
+        known = {f.name for f in dataclasses.fields(cls) if f.name != "explicit"}
+        values = {k: v for k, v in data.items() if k in known}
+        config = cls(**values)  # type: ignore[arg-type]
+        # a JSON null means "not set" (so `defaults` may fill it); 0/False are values
+        config.explicit = {k for k, v in values.items() if v is not None}
+        return config
 
     @property
     def entry_urls(self) -> List[str]:
@@ -800,11 +807,15 @@ class SiteConfig:
         return [self.url] + extra
 
     def merged(self, defaults: Dict[str, object]) -> "SiteConfig":
-        base = {f.name: getattr(self, f.name) for f in dataclasses.fields(self)}
-        for key, value in defaults.items():
-            if key in base and base[key] in (None, "", False):
-                base[key] = value
-        return SiteConfig(**base)  # type: ignore[arg-type]
+        """Apply the file's `defaults` to every key this site did not set itself."""
+        base = {f.name: getattr(self, f.name) for f in dataclasses.fields(self)
+                if f.name != "explicit"}
+        applied = {k for k in defaults if k in base and k not in self.explicit}
+        for key in applied:
+            base[key] = defaults[key]
+        merged = SiteConfig(**base)  # type: ignore[arg-type]
+        merged.explicit = set(self.explicit) | applied
+        return merged
 
 
 class SiteCloner:
@@ -958,8 +969,23 @@ class SiteCloner:
         return list(files.values())
 
     def _save_index_page(self, url: str, text: str) -> None:
+        """Store a listing page under _index/pages/, mirroring its URL path.
+
+        The path comes from a remote URL, so every segment is sanitised exactly
+        like a document name, and the resolved directory is checked to be inside
+        the pages root before anything is created: a listing reachable as
+        ``.../%2e%2e/x/`` must not write outside the output folder.
+        """
+        pages_root = os.path.join(self.index_root, "pages")
         rel = rel_dir_for(url, self.base_url) or ""
-        target_dir = os.path.join(self.index_root, "pages", *[p for p in rel.split("/") if p])
+        segments = [sanitize_component(p) for p in rel.split("/") if p]
+        target_dir = os.path.realpath(os.path.join(pages_root, *segments))
+        if os.path.commonpath([os.path.realpath(pages_root), target_dir]) \
+                != os.path.realpath(pages_root):
+            self.log("refusing to write a listing page outside %s: %s", pages_root, url)
+            self.errors.append({"url": url, "stage": "index-page",
+                                "error": "path escapes the pages root"})
+            return
         os.makedirs(target_dir, exist_ok=True)
         name = "index.html" if rel == "" or url.endswith("/") else "page.html"
         with open(os.path.join(target_dir, name), "w", encoding="utf-8") as fh:
@@ -1209,7 +1235,6 @@ class SiteCloner:
                     prev["last_modified"] = headers.get("Last-Modified")
                     prev["fetched_at"] = utcnow()
                     self.state[state_key] = prev
-                    self.bytes_downloaded += written
                     self.log("unchanged (listed size %s, stored %s) %s",
                              entry.size, written, rel)
                     self._record(entry, status="unchanged", local_path=rel, size=written,
@@ -1267,6 +1292,10 @@ class SiteCloner:
                     raise _SkipRequest()
             elif not self._budget_head(entry, total, budget_rel, reserve=True):
                 raise _SkipRequest()
+            # either the listed size or the response length was already reserved
+            # in _check_budget/_budget_head; only a response of unknown length has
+            # to be charged as it streams (charging both doubles the total)
+            reserved = entry.size is not None or total is not None
             with open(tmp, "wb") as fh:
                 while True:
                     buf = stream.read(CHUNK)
@@ -1277,7 +1306,7 @@ class SiteCloner:
                         self._record(entry, status="skipped", local_path=budget_rel,
                                      error="exceeded max_file_bytes mid-stream")
                         raise _SkipRequest()
-                    if not self.budget.extend(len(buf)):
+                    if not reserved and not self.budget.extend(len(buf)):
                         self._record(entry, status="skipped", local_path=budget_rel,
                                      error="total byte budget exhausted ({})".format(
                                          human(self.budget.limit)))
@@ -1736,6 +1765,10 @@ def build_parser() -> argparse.ArgumentParser:
     src.add_argument("--url", help="ad-hoc listing URL")
     src.add_argument("--slug", help="folder name for --url")
     src.add_argument("--list", action="store_true", help="list configured sites and exit")
+    src.add_argument("--rerun-hint", metavar="TEXT",
+                     help="command recorded in each site README instead of this "
+                          "actual argv ({slug} is replaced by the site slug); for "
+                          "wrapper tools whose own paths are temporary")
     src.add_argument("--rewrite", action="append", default=[], metavar="OLD=NEW",
                      help="fetch OLD through NEW (for replica/test servers); reports "
                           "keep the original URLs")
@@ -1845,6 +1878,9 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
     def command_for(site: SiteConfig) -> str:
         """The command line that reproduces this site's run, for its README."""
+        if args.rerun_hint:
+            # plain replace: the hint is arbitrary shell text, braces and all
+            return args.rerun_hint.replace("{slug}", site.slug)
         parts = ["python3 scraper.py"]
         if args.config:
             parts += ["--config", args.config]
