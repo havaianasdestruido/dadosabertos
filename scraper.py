@@ -887,12 +887,15 @@ class SiteCloner:
     def relpath(self, url: str) -> str:
         return local_relpath(url, self.base_url, self.taken_paths)
 
+    def _excluded(self, url: str) -> bool:
+        """--exclude matches directories too, so whole subtrees can be skipped."""
+        return bool(self._exclude and self._exclude.search(url))
+
     def _selected(self, url: str) -> bool:
-        if self._include and not self._include.search(url):
+        """--include applies to documents only: folders are always traversed."""
+        if self._excluded(url):
             return False
-        if self._exclude and self._exclude.search(url):
-            return False
-        return True
+        return not (self._include and not self._include.search(url))
 
     def log(self, msg: str, *args) -> None:
         LOG.info("[%s] " + msg, self.site.slug, *args)
@@ -930,7 +933,7 @@ class SiteCloner:
             entries = parse_listing(text, url, self.base_url, self.site.follow_external)
             n_dirs = 0
             for entry in entries:
-                if not self._selected(entry.url):
+                if self._excluded(entry.url):
                     continue
                 if entry.unknown:
                     # the listing published no metadata: probe to find out whether
@@ -940,7 +943,7 @@ class SiteCloner:
                             queue.append((as_dir_url(entry.url), depth + 1))
                             n_dirs += 1
                         # a folder beyond the depth limit is not a document
-                    else:
+                    elif self._selected(entry.url):
                         files.setdefault(canonical_url(entry.url), entry)
                     continue
                 if entry.is_dir:
@@ -948,7 +951,8 @@ class SiteCloner:
                         queue.append((as_dir_url(entry.url), depth + 1))
                         n_dirs += 1
                     continue
-                files.setdefault(canonical_url(entry.url), entry)
+                if self._selected(entry.url):
+                    files.setdefault(canonical_url(entry.url), entry)
             self.log("crawl depth=%d dirs=%d files=%d  %s", depth, n_dirs, len(files), url)
         self.log("crawl finished: %d listing pages, %d documents", pages, len(files))
         return list(files.values())

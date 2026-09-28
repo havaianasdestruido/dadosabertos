@@ -2,7 +2,7 @@
 
 * source listing: <https://replica.local/pgfn/>
 * output folder: `dadosabertos.pgfn.gov.br`
-* cloned at: 2026-09-28T13:05:53Z
+* cloned at: 2026-09-28T13:07:21Z
 * documents discovered: **7** (7 fetched this run, 1.1 MiB unique bytes stored)
 * downloaded in this run: 1.1 MiB
 * duplicates collapsed: **3** (1.0 MiB)
@@ -24,5 +24,5 @@ Bullet-style index without sizes: the crawler decides file-vs-directory by probi
 Re-run / resume with:
 
 ```bash
-python3 scraper.py --config /tmp/indexclone-demo-sj49agkl/replica_sites.json --site dadosabertos.pgfn.gov.br --out outputs-replica --jobs 4 --rate 0.0 --rewrite https://replica.local/=http://127.0.0.1:33313/ --dupe-strategy hardlink
+python3 scraper.py --config /tmp/indexclone-demo-8hwai92t/replica_sites.json --site dadosabertos.pgfn.gov.br --out outputs-replica --jobs 4 --rate 0.0 --rewrite https://replica.local/=http://127.0.0.1:39505/ --dupe-strategy hardlink
 ```

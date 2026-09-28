@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-28T13:05:52Z",
+ "generated_at": "2026-09-28T13:07:21Z",
  "tool": "indexclone 1.0.0",
  "summary": {
   "site": "dados.cvm.gov.br",
@@ -11,8 +11,8 @@
   ],
   "title": "",
   "note": "",
-  "started": "2026-09-28T13:05:52Z",
-  "finished": "2026-09-28T13:05:52Z",
+  "started": "2026-09-28T13:07:20Z",
+  "finished": "2026-09-28T13:07:21Z",
   "elapsed_s": 0,
   "listing_pages": 27,
   "documents_discovered": 1,

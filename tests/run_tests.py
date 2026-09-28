@@ -318,9 +318,9 @@ class TestEndToEnd(unittest.TestCase):
         shutil.rmtree(cls.tmp, ignore_errors=True)
 
     # -- helpers ---------------------------------------------------------
-    def run_cli(self, extra, expect=0):
+    def run_cli(self, extra, expect=0, out=None):
         args = ["--config", self.config, "--all",
-                "--out", self.out, "--jobs", "6", "--rate", "0", "--quiet",
+                "--out", out or self.out, "--jobs", "6", "--rate", "0", "--quiet",
                 "--rewrite", self.rewrite[0]] + extra
         code = scraper.main(args)
         self.assertEqual(code, expect, "scraper.main returned {} for {}".format(code, extra))
@@ -557,6 +557,27 @@ class TestEndToEnd(unittest.TestCase):
         import csv as csvmod
         with open(os.path.join(out, slug, "_reports", "manifest.csv"), encoding="utf-8") as fh:
             return list(csvmod.DictReader(fh))
+
+    def test_12_include_filter_keeps_folders_traversable(self):
+        # regression: --include must only filter documents, never prune the walk
+        out = os.path.join(self.tmp, "out-include")
+        self.run_cli(["--site", "geofiles.caxias.rs.gov.br",
+                      "--include", r"\.dwg$"], out=out)
+        names = sorted(os.listdir(os.path.join(out, "geofiles.caxias.rs.gov.br", "files",
+                                               "pub", "quadras", "45")))
+        self.assertEqual([n for n in names if n.endswith(".dwg")],
+                         ["quadra_45.dwg"])
+        self.assertFalse([n for n in names if n.endswith(".kml")])
+        self.assertTrue(os.path.exists(os.path.join(
+            out, "geofiles.caxias.rs.gov.br", "files", "pub", "quadras", "46",
+            "quadra_46.dwg")))
+
+    def test_13_exclude_filter_prunes_a_subtree(self):
+        out = os.path.join(self.tmp, "out-exclude")
+        self.run_cli(["--site", "geofiles.caxias.rs.gov.br", "--exclude", r"/46/"], out=out)
+        files = os.path.join(out, "geofiles.caxias.rs.gov.br", "files", "pub", "quadras")
+        self.assertFalse(os.path.exists(os.path.join(files, "46")))
+        self.assertTrue(os.path.exists(os.path.join(files, "45", "LEIAME.txt")))
 
 
 class TestRobotsAndErrors(unittest.TestCase):

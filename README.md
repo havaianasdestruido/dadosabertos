@@ -132,7 +132,7 @@ over an unchanged tree downloads **0 bytes** and removes nothing.
 ## Tests
 
 ```bash
-python3 tests/run_tests.py -v          # 36 tests, no network access needed
+python3 tests/run_tests.py -v          # 38 tests, no network access needed
 ```
 
 * `TestHelpers` — URL canonicalisation (sort links, `?SA`-style parameters,
@@ -147,7 +147,9 @@ python3 tests/run_tests.py -v          # 36 tests, no network access needed
   first run, duplicates (range probe and SHA-256), hardlink inode equality,
   "same size ≠ same bytes", second run is a no-op that deletes nothing,
   resume after a deletion, `--refresh`, `--dupe-strategy report`, `--dry-run`
-  (a full inventory with candidate pairs, no payload), limit flags, dead links.
+  (a full inventory with candidate pairs, no payload), limit flags, `--include`
+  and `--exclude` (the latter prunes whole subtrees, the former never stops the
+  walk), dead links.
 * `TestRobotsAndErrors` — robots-disallowed URLs are recorded and skipped (and
   downloaded with `--ignore-robots`), 404s are reported without aborting.
 * `TestProductionConfig` — `sites.json` really lists the six requested

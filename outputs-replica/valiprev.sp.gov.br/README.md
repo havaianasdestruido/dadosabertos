@@ -2,7 +2,7 @@
 
 * source listing: <https://replica.local/valiprev/>
 * output folder: `valiprev.sp.gov.br`
-* cloned at: 2026-09-28T13:05:53Z
+* cloned at: 2026-09-28T13:07:21Z
 * documents discovered: **8** (8 fetched this run, 2.1 MiB unique bytes stored)
 * downloaded in this run: 2.1 MiB
 * duplicates collapsed: **2** (7.4 KiB)
@@ -24,5 +24,5 @@ Apache table dialect: names are truncated in the visible cell and recovered from
 Re-run / resume with:
 
 ```bash
-python3 scraper.py --config /tmp/indexclone-demo-sj49agkl/replica_sites.json --site valiprev.sp.gov.br --out outputs-replica --jobs 4 --rate 0.0 --rewrite https://replica.local/=http://127.0.0.1:33313/ --dupe-strategy hardlink
+python3 scraper.py --config /tmp/indexclone-demo-8hwai92t/replica_sites.json --site valiprev.sp.gov.br --out outputs-replica --jobs 4 --rate 0.0 --rewrite https://replica.local/=http://127.0.0.1:39505/ --dupe-strategy hardlink
 ```

@@ -3,7 +3,7 @@
   "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA.pdf": {
    "dedupe_method": "sha256",
    "duplicate_of": "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf",
-   "fetched_at": "2026-09-28T13:05:53Z",
+   "fetched_at": "2026-09-28T13:07:21Z",
    "listed_size": 3800,
    "local_path": "uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA.pdf",
    "name": "10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA.pdf",
@@ -14,9 +14,9 @@
   "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf": {
    "content_type": "application/pdf",
    "etag": null,
-   "fetched_at": "2026-09-28T13:05:53Z",
+   "fetched_at": "2026-09-28T13:07:21Z",
    "head": "a077779091c967a29cae454e291e5aa25f7cd29a60d57f3e1981cfc2bb0e8696",
-   "last_modified": "Mon, 28 Sep 2026 13:05:53 GMT",
+   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
    "listed_size": 3800,
    "local_path": "uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf",
    "name": "10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf",
@@ -28,7 +28,7 @@
   "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA2.pdf": {
    "dedupe_method": "sha256",
    "duplicate_of": "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf",
-   "fetched_at": "2026-09-28T13:05:53Z",
+   "fetched_at": "2026-09-28T13:07:21Z",
    "listed_size": 3800,
    "local_path": "uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA2.pdf",
    "name": "10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA2.pdf",
@@ -39,9 +39,9 @@
   "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/500.pdf": {
    "content_type": "application/pdf",
    "etag": null,
-   "fetched_at": "2026-09-28T13:05:53Z",
+   "fetched_at": "2026-09-28T13:07:21Z",
    "head": "2ac6e0a6775a7bf9d39c7dae90177dacc9d5f85362b3ca51a7723b93ce37197f",
-   "last_modified": "Mon, 28 Sep 2026 13:05:53 GMT",
+   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
    "listed_size": 396288,
    "local_path": "uploads/paginas/certidoes/pdf/500.pdf",
    "name": "500.pdf",
@@ -53,9 +53,9 @@
   "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/AUDI%C3%8ANCIA_2023_-_LISTA_DE_PRESEN%C3%87A.pdf": {
    "content_type": "application/pdf",
    "etag": null,
-   "fetched_at": "2026-09-28T13:05:53Z",
+   "fetched_at": "2026-09-28T13:07:21Z",
    "head": "2dc3e539e004a203b372656fa28b3418f312758342486dd589a4bafa466c852f",
-   "last_modified": "Mon, 28 Sep 2026 13:05:53 GMT",
+   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
    "listed_size": 346112,
    "local_path": "uploads/paginas/certidoes/pdf/AUDI\u00caNCIA_2023_-_LISTA_DE_PRESEN\u00c7A.pdf",
    "name": "AUDI\u00caNCIA_2023_-_LISTA_DE_PRESEN\u00c7A.pdf",
@@ -67,9 +67,9 @@
   "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/AUDI%C3%8ANCIA_2024_-_DI..X.pdf": {
    "content_type": "application/pdf",
    "etag": null,
-   "fetched_at": "2026-09-28T13:05:53Z",
+   "fetched_at": "2026-09-28T13:07:21Z",
    "head": "c2f01de93c8b39d3a846666455a41645e1f8a8ac94aaf4fd79db6b484ec77eca",
-   "last_modified": "Mon, 28 Sep 2026 13:05:53 GMT",
+   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
    "listed_size": 722944,
    "local_path": "uploads/paginas/certidoes/pdf/AUDI\u00caNCIA_2024_-_DI..X.pdf",
    "name": "AUDI\u00caNCIA_2024_-_DI..X.pdf",
@@ -81,9 +81,9 @@
   "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/AUDI%C3%8ANCIA_2024_-_LISTA_DE_PRESEN%C3%87A.pdf": {
    "content_type": "application/pdf",
    "etag": null,
-   "fetched_at": "2026-09-28T13:05:53Z",
+   "fetched_at": "2026-09-28T13:07:21Z",
    "head": "b96452ee61853e5e88c17660d5447bebf4522f747e9f8bb8aaf9e220ee42ad50",
-   "last_modified": "Mon, 28 Sep 2026 13:05:53 GMT",
+   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
    "listed_size": 675840,
    "local_path": "uploads/paginas/certidoes/pdf/AUDI\u00caNCIA_2024_-_LISTA_DE_PRESEN\u00c7A.pdf",
    "name": "AUDI\u00caNCIA_2024_-_LISTA_DE_PRESEN\u00c7A.pdf",
@@ -95,9 +95,9 @@
   "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/CERTID%C3%83O_DE_REGULARIDADE_DO_FGTS.pdf": {
    "content_type": "application/pdf",
    "etag": null,
-   "fetched_at": "2026-09-28T13:05:53Z",
+   "fetched_at": "2026-09-28T13:07:21Z",
    "head": "c27d5f411abb88f0df9d3d46f4b135f31fd60d0b6a66fab007ebd1653d79b00d",
-   "last_modified": "Mon, 28 Sep 2026 13:05:53 GMT",
+   "last_modified": "Mon, 28 Sep 2026 13:07:21 GMT",
    "listed_size": 92160,
    "local_path": "uploads/paginas/certidoes/pdf/CERTID\u00c3O_DE_REGULARIDADE_DO_FGTS.pdf",
    "name": "CERTID\u00c3O_DE_REGULARIDADE_DO_FGTS.pdf",
@@ -108,5 +108,5 @@
   }
  },
  "site": "valiprev.sp.gov.br",
- "updated": "2026-09-28T13:05:53Z"
+ "updated": "2026-09-28T13:07:21Z"
 }

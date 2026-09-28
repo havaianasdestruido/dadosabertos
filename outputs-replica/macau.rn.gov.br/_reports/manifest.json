@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-28T13:05:53Z",
+ "generated_at": "2026-09-28T13:07:21Z",
  "tool": "indexclone 1.0.0",
  "summary": {
   "site": "macau.rn.gov.br",
@@ -9,8 +9,8 @@
   ],
   "title": "Diário Oficial de Macau (replica)",
   "note": "Pure link farm: every href lacks a trailing slash, a date and a size, so each one is probed. Two 2013 editions are byte-identical under different names.",
-  "started": "2026-09-28T13:05:53Z",
-  "finished": "2026-09-28T13:05:53Z",
+  "started": "2026-09-28T13:07:21Z",
+  "finished": "2026-09-28T13:07:21Z",
   "elapsed_s": 0.01,
   "listing_pages": 5,
   "documents_discovered": 5,
@@ -41,7 +41,7 @@
    "http_status": null,
    "content_type": "application/pdf",
    "error": null,
-   "duration_s": 0.006
+   "duration_s": 0.004
   },
   {
    "url": "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/01%20-%20Janeiro-2013/macau-2013-01-15.pdf",
@@ -56,7 +56,7 @@
    "http_status": null,
    "content_type": "application/pdf",
    "error": null,
-   "duration_s": 0.004
+   "duration_s": 0.006
   },
   {
    "url": "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/02%20-%20Fevereiro-2013/macau-2013-02-07.pdf",
@@ -71,7 +71,7 @@
    "http_status": null,
    "content_type": "application/pdf",
    "error": null,
-   "duration_s": 0.006
+   "duration_s": 0.004
   },
   {
    "url": "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/03%20-%20Mar%C3%A7o-2013/macau-2013-03-11-edicao-2.pdf",
@@ -101,7 +101,7 @@
    "http_status": null,
    "content_type": "application/pdf",
    "error": null,
-   "duration_s": 0.008
+   "duration_s": 0.007
   }
  ]
 }
