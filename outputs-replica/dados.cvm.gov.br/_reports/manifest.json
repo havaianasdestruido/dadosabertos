@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-28T17:33:18Z",
+ "generated_at": "2026-09-28T18:05:14Z",
  "tool": "indexclone 1.0.0",
  "summary": {
   "site": "dados.cvm.gov.br",
@@ -9,8 +9,8 @@
   ],
   "title": "Portal Dados Abertos CVM (replica)",
   "note": "Apache <pre> index with dates and human sizes; 'CIA_ABERTA' and 'FIDC' both publish a 96 KiB 'doc' archive with identical bytes, while 'cia_aberta_fre_2025.zip' has the same size with different content — the deduper must collapse the first pair only.",
-  "started": "2026-09-28T17:33:18Z",
-  "finished": "2026-09-28T17:33:18Z",
+  "started": "2026-09-28T18:05:14Z",
+  "finished": "2026-09-28T18:05:14Z",
   "elapsed_s": 0.01,
   "listing_pages": 4,
   "documents_discovered": 5,
@@ -41,7 +41,7 @@
    "http_status": null,
    "content_type": "application/zip",
    "error": null,
-   "duration_s": 0.005
+   "duration_s": 0.006
   },
   {
    "url": "https://replica.local/cvm/dados/ADM_CART/ADM_CART_CAD_2025.zip",
@@ -56,7 +56,7 @@
    "http_status": null,
    "content_type": "application/zip",
    "error": null,
-   "duration_s": 0.005
+   "duration_s": 0.004
   },
   {
    "url": "https://replica.local/cvm/dados/CIA_ABERTA/cia_aberta_doc_2025.zip",
@@ -71,7 +71,7 @@
    "http_status": null,
    "content_type": "application/zip",
    "error": null,
-   "duration_s": 0.004
+   "duration_s": 0.006
   },
   {
    "url": "https://replica.local/cvm/dados/CIA_ABERTA/cia_aberta_fre_2025.zip",
@@ -86,7 +86,7 @@
    "http_status": null,
    "content_type": "application/zip",
    "error": null,
-   "duration_s": 0.006
+   "duration_s": 0.004
   },
   {
    "url": "https://replica.local/cvm/dados/FIDC/fidc_doc_2025.zip",

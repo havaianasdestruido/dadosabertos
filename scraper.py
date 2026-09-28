@@ -1292,10 +1292,14 @@ class SiteCloner:
                     raise _SkipRequest()
             elif not self._budget_head(entry, total, budget_rel, reserve=True):
                 raise _SkipRequest()
-            # either the listed size or the response length was already reserved
-            # in _check_budget/_budget_head; only a response of unknown length has
-            # to be charged as it streams (charging both doubles the total)
-            reserved = entry.size is not None or total is not None
+            # how much of this download the budget already accounted for: the
+            # listed size (reserved by _check_budget) or, when the listing
+            # published none, the response length (reserved just above). A short
+            # reservation must not let the stream run past --max-total-bytes, so
+            # every byte beyond it is charged before it is written.
+            base = entry.size if entry.size is not None else total
+            reserved = int(base or 0)
+            charged = 0
             with open(tmp, "wb") as fh:
                 while True:
                     buf = stream.read(CHUNK)
@@ -1306,11 +1310,14 @@ class SiteCloner:
                         self._record(entry, status="skipped", local_path=budget_rel,
                                      error="exceeded max_file_bytes mid-stream")
                         raise _SkipRequest()
-                    if not reserved and not self.budget.extend(len(buf)):
-                        self._record(entry, status="skipped", local_path=budget_rel,
-                                     error="total byte budget exhausted ({})".format(
-                                         human(self.budget.limit)))
-                        raise _SkipRequest()
+                    excess = written - reserved
+                    if excess > charged:
+                        if not self.budget.extend(excess - charged):
+                            self._record(entry, status="skipped", local_path=budget_rel,
+                                         error="total byte budget exhausted ({})".format(
+                                             human(self.budget.limit)))
+                            raise _SkipRequest()
+                        charged = excess
                     sha.update(buf)
                     fh.write(buf)
             headers = dict(stream.headers)

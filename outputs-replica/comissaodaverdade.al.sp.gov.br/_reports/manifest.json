@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-28T17:33:18Z",
+ "generated_at": "2026-09-28T18:05:14Z",
  "tool": "indexclone 1.0.0",
  "summary": {
   "site": "comissaodaverdade.al.sp.gov.br",
@@ -9,9 +9,9 @@
   ],
   "title": "Comissão da Verdade ALESP — acervo (replica)",
   "note": "Links without metadata; content-identical documents appear under different names ('001-ArquivoCEMDP.pdf' vs '...-devanir.pdf'), which is exactly what the SHA-256 deduper is for.",
-  "started": "2026-09-28T17:33:17Z",
-  "finished": "2026-09-28T17:33:18Z",
-  "elapsed_s": 0.02,
+  "started": "2026-09-28T18:05:14Z",
+  "finished": "2026-09-28T18:05:14Z",
+  "elapsed_s": 0.01,
   "listing_pages": 1,
   "documents_discovered": 8,
   "documents_fetched": 8,
@@ -41,7 +41,7 @@
    "http_status": null,
    "content_type": "application/pdf",
    "error": null,
-   "duration_s": 0.005
+   "duration_s": 0.002
   },
   {
    "url": "https://replica.local/comissao/upload/001-Antonio-Raymundo-Lucena.pdf",
@@ -56,7 +56,7 @@
    "http_status": null,
    "content_type": "application/pdf",
    "error": null,
-   "duration_s": 0.003
+   "duration_s": 0.004
   },
   {
    "url": "https://replica.local/comissao/upload/001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis.pdf",
@@ -71,7 +71,7 @@
    "http_status": null,
    "content_type": "application/pdf",
    "error": null,
-   "duration_s": 0.007
+   "duration_s": 0.005
   },
   {
    "url": "https://replica.local/comissao/upload/001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis004.pdf",
@@ -131,7 +131,7 @@
    "http_status": null,
    "content_type": "image/jpeg",
    "error": null,
-   "duration_s": 0.008
+   "duration_s": 0.004
   },
   {
    "url": "https://replica.local/comissao/upload/001-Certidao-de-casamento.pdf",

@@ -17,6 +17,7 @@ Two layers:
 
 from __future__ import annotations
 
+import csv
 import json
 import os
 import shutil
@@ -728,6 +729,141 @@ class TestRobotsAndErrors(unittest.TestCase):
 
 def load_tests(loader, tests, pattern):
     return tests
+
+
+# ==========================================================================
+# the byte budget must bound what is really fetched
+# ==========================================================================
+
+
+class _FakeStream:
+    """Minimal stand-in for Fetcher's response object."""
+
+    def __init__(self, body: bytes, headers=None, status: int = 200):
+        self._body, self._pos = body, 0
+        self.headers, self.status, self.url = headers or {}, status, ""
+
+    def read(self, size: int) -> bytes:
+        chunk = self._body[self._pos:self._pos + size]
+        self._pos += len(chunk)
+        return chunk
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+
+class TestBudgetAccounting(unittest.TestCase):
+    """A short reservation must not let a stream run past --max-total-bytes."""
+
+    def setUp(self):
+        self.tmp = tempfile.mkdtemp(prefix="indexclone-budget-unit-")
+        self.budget = scraper.ByteBudget(50000)
+        self.cloner = scraper.SiteCloner(
+            site=scraper.SiteConfig(slug="b", url="https://b.local/"),
+            out_root=self.tmp, fetcher=scraper.Fetcher(rate=0),
+            dedup=scraper.DedupIndex(), budget=self.budget)
+
+    def tearDown(self):
+        shutil.rmtree(self.tmp, ignore_errors=True)
+
+    def _entry(self, size):
+        return scraper.Entry(url="https://b.local/f.bin", name="f.bin", is_dir=False,
+                             size=size, origin="probe")
+
+    def test_bytes_beyond_a_short_listed_size_are_charged(self):
+        self.budget = scraper.ByteBudget(100000)     # room for the whole body
+        self.cloner.budget = self.budget
+        entry = self._entry(1024)                    # listing says 1.0K ...
+        body = b"x" * 61440                          # ... the server sends 60 KiB
+        self.cloner._open_stream = lambda url, headers=None: _FakeStream(
+            body, {"Content-Length": str(len(body))})
+        self.assertTrue(self.cloner._check_budget(entry, "f.bin", None))
+        self.assertEqual(self.budget.used, 1024)     # only the listed size reserved
+        tmp = os.path.join(self.tmp, "f.bin.part")
+        written, _, _ = self.cloner._download(entry, tmp, None, "f.bin")
+        self.assertEqual(written, len(body))
+        self.assertEqual(self.budget.used, len(body), "the excess must be charged")
+
+    def test_response_length_is_reserved_when_the_listing_publishes_no_size(self):
+        entry = self._entry(None)
+        body = b"y" * 4096
+        self.cloner._open_stream = lambda url, headers=None: _FakeStream(
+            body, {"Content-Length": str(len(body))})
+        written, _, _ = self.cloner._download(entry, os.path.join(self.tmp, "g.part"),
+                                             None, "g.bin")
+        self.assertEqual(written, len(body))
+        self.assertEqual(self.budget.used, len(body))    # reserved, not double charged
+
+    def test_a_stream_of_unknown_length_is_charged_as_it_arrives(self):
+        entry = self._entry(None)
+        body = b"z" * 4096
+        self.cloner._open_stream = lambda url, headers=None: _FakeStream(body)
+        written, _, _ = self.cloner._download(entry, os.path.join(self.tmp, "h.part"),
+                                             None, "h.bin")
+        self.assertEqual(written, len(body))
+        self.assertEqual(self.budget.used, len(body))
+
+    def test_the_stream_stops_at_the_cap_and_records_a_skip(self):
+        self.budget = scraper.ByteBudget(20000)
+        self.cloner.budget = self.budget
+        entry = self._entry(1024)
+        body = b"x" * 61440
+        self.cloner._open_stream = lambda url, headers=None: _FakeStream(
+            body, {"Content-Length": str(len(body))})
+        self.assertTrue(self.cloner._check_budget(entry, "f.bin", None))
+        with self.assertRaises(scraper._SkipRequest):
+            self.cloner._download(entry, os.path.join(self.tmp, "i.part"), None, "f.bin")
+        self.assertLessEqual(self.budget.used, 20000)
+        self.assertEqual([r["status"] for r in self.cloner.records], ["skipped"])
+        self.assertIn("total byte budget", self.cloner.records[0]["error"])
+
+
+class TestLyingListingBudget(unittest.TestCase):
+    """End to end: a listing that understates a size must not defeat the cap."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = tempfile.mkdtemp(prefix="indexclone-budget-")
+        os.makedirs(os.path.join(cls.tmp, "docs"))
+        with open(os.path.join(cls.tmp, "docs", "big.bin"), "wb") as fh:
+            fh.write(b"x" * 61440)                    # 60 KiB on the wire ...
+        with open(os.path.join(cls.tmp, "docs", "index.html"), "w", encoding="utf-8") as fh:
+            fh.write('<html><head><title>Index of /docs/</title></head><body>'
+                     '<a href="big.bin">big.bin</a> 1.0K</body></html>')   # ... listed as 1K
+        cls.httpd, cls.base, _ = replica_server.serve_in_thread(cls.tmp)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.httpd.shutdown()
+        cls.httpd.server_close()
+        shutil.rmtree(cls.tmp, ignore_errors=True)
+
+    def _run(self, cap: int, slug: str):
+        out = os.path.join(self.tmp, slug)
+        code = scraper.main(["--url", "{}/docs/".format(self.base), "--slug", slug,
+                             "--out", out, "--rate", "0", "--quiet",
+                             "--max-total-bytes", str(cap)])
+        summary = json.loads(read(os.path.join(out, slug, "_reports", "summary.json")))
+        with open(os.path.join(out, slug, "_reports", "manifest.csv"), encoding="utf-8") as fh:
+            rows = list(csv.DictReader(fh))
+        return code, summary, rows, os.path.join(out, slug, "files", "big.bin")
+
+    def test_a_cap_smaller_than_the_real_body_skips_the_file(self):
+        _, summary, rows, stored = self._run(20000, "capped")
+        self.assertEqual(summary["bytes_downloaded_this_run"], 0)
+        self.assertEqual(rows[0]["status"], "skipped")
+        self.assertIn("total byte budget", rows[0]["error"])
+        self.assertFalse(os.path.exists(stored), "nothing may be stored past the cap")
+
+    def test_a_cap_large_enough_downloads_it_and_accounts_for_every_byte(self):
+        _, summary, rows, stored = self._run(100000, "roomy")
+        self.assertEqual(summary["bytes_downloaded_this_run"], 61440)
+        self.assertEqual(rows[0]["status"], "downloaded")
+        self.assertTrue(os.path.exists(stored))
+        self.assertEqual(os.path.getsize(stored), 61440)
 
 
 if __name__ == "__main__":

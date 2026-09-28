@@ -3,9 +3,9 @@
   "https://replica.local/pgfn/2025_trimestre_03/Dados_abertos_FGTS.zip": {
    "content_type": "application/zip",
    "etag": null,
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "head": "6898897e6e1f21a0a6cf27f4dad8e615853e1d90f03dd92e6032b2e29c632c9f",
-   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
+   "last_modified": "Mon, 28 Sep 2026 18:05:13 GMT",
    "listed_size": 307200,
    "local_path": "2025_trimestre_03/Dados_abertos_FGTS.zip",
    "name": "Dados_abertos_FGTS.zip",
@@ -17,9 +17,9 @@
   "https://replica.local/pgfn/2025_trimestre_03/Dados_abertos_Nao_Previdenciario.zip": {
    "content_type": "application/zip",
    "etag": null,
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "head": "4e17d96ed4668c9a7f4b28d16708f1ececa55881fb89019b5e3814c88c48ea58",
-   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
+   "last_modified": "Mon, 28 Sep 2026 18:05:13 GMT",
    "listed_size": 327680,
    "local_path": "2025_trimestre_03/Dados_abertos_Nao_Previdenciario.zip",
    "name": "Dados_abertos_Nao_Previdenciario.zip",
@@ -31,9 +31,9 @@
   "https://replica.local/pgfn/2025_trimestre_03/Dados_abertos_Previdenciario.zip": {
    "content_type": "application/zip",
    "etag": null,
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "head": "79836ffb12168c1dd7f1085eb597111e84c6cd3e1418432abe536ddf653837c3",
-   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
    "listed_size": 430080,
    "local_path": "2025_trimestre_03/Dados_abertos_Previdenciario.zip",
    "name": "Dados_abertos_Previdenciario.zip",
@@ -45,7 +45,7 @@
   "https://replica.local/pgfn/2025_trimestre_04/Dados_abertos_FGTS.zip": {
    "dedupe_method": "range-probe",
    "duplicate_of": "https://replica.local/pgfn/2025_trimestre_03/Dados_abertos_FGTS.zip",
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "listed_size": 307200,
    "local_path": "2025_trimestre_04/Dados_abertos_FGTS.zip",
    "name": "Dados_abertos_FGTS.zip",
@@ -56,7 +56,7 @@
   "https://replica.local/pgfn/2025_trimestre_04/Dados_abertos_Nao_Previdenciario.zip": {
    "dedupe_method": "range-probe",
    "duplicate_of": "https://replica.local/pgfn/2025_trimestre_03/Dados_abertos_Nao_Previdenciario.zip",
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "listed_size": 327680,
    "local_path": "2025_trimestre_04/Dados_abertos_Nao_Previdenciario.zip",
    "name": "Dados_abertos_Nao_Previdenciario.zip",
@@ -67,7 +67,7 @@
   "https://replica.local/pgfn/2025_trimestre_04/Dados_abertos_Previdenciario.zip": {
    "dedupe_method": "range-probe",
    "duplicate_of": "https://replica.local/pgfn/2025_trimestre_03/Dados_abertos_Previdenciario.zip",
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "listed_size": 430080,
    "local_path": "2025_trimestre_04/Dados_abertos_Previdenciario.zip",
    "name": "Dados_abertos_Previdenciario.zip",
@@ -78,9 +78,9 @@
   "https://replica.local/pgfn/Portal_da_Cidadania_Tributaria/Sistema_de_Parcelamento_2025.zip": {
    "content_type": "application/zip",
    "etag": null,
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "head": "c4e1ceb139ceae385305fba7288079145948bf241c6830d9e57550d755a8d10f",
-   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
    "listed_size": null,
    "local_path": "Portal_da_Cidadania_Tributaria/Sistema_de_Parcelamento_2025.zip",
    "name": "Sistema_de_Parcelamento_2025.zip",
@@ -91,5 +91,5 @@
   }
  },
  "site": "dadosabertos.pgfn.gov.br",
- "updated": "2026-09-28T17:33:17Z"
+ "updated": "2026-09-28T18:05:14Z"
 }

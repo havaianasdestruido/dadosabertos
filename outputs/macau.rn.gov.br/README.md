@@ -2,7 +2,7 @@
 
 * source listing: <https://macau.rn.gov.br/diario/>
 * output folder: `macau.rn.gov.br`
-* cloned at: 2026-09-28T17:33:17Z
+* cloned at: 2026-09-28T18:05:13Z
 * documents discovered: **8** (0 fetched this run, 0 B unique bytes stored)
 * downloaded in this run: 0 B
 * duplicates collapsed: **0** (0 B)

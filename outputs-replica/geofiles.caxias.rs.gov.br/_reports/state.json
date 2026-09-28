@@ -3,9 +3,9 @@
   "https://replica.local/caxias/pub/quadras/45/LEIAME.txt": {
    "content_type": "text/plain",
    "etag": null,
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "head": "7d6a0f8fe51ec2bce1454e96c94043ee0988d84f63751b667b007164a9dbaa25",
-   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
    "listed_size": 1228,
    "local_path": "pub/quadras/45/LEIAME.txt",
    "name": "LEIAME.txt",
@@ -17,9 +17,9 @@
   "https://replica.local/caxias/pub/quadras/45/quadra_45.dwg": {
    "content_type": "image/vnd.dwg",
    "etag": null,
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "head": "daf9002e703cf80dfdb20614f38b4a2ea8185a081b7beee1ed6a0d31cbc3bcd3",
-   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
    "listed_size": 215040,
    "local_path": "pub/quadras/45/quadra_45.dwg",
    "name": "quadra_45.dwg",
@@ -31,9 +31,9 @@
   "https://replica.local/caxias/pub/quadras/45/quadra_45_lotes.kml": {
    "content_type": "application/vnd.google-earth.kml+xml",
    "etag": null,
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "head": "84e6814432fae5279f2188e9efce48234c62a6d21694afcae9d956e6d8c58692",
-   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
    "listed_size": 30720,
    "local_path": "pub/quadras/45/quadra_45_lotes.kml",
    "name": "quadra_45_lotes.kml",
@@ -45,9 +45,9 @@
   "https://replica.local/caxias/pub/quadras/46/LEIAME.txt": {
    "content_type": "text/plain",
    "etag": null,
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "head": "0697ad37cc970f911febf415e14ff133089cbe2d21911c217aced6761ea4f324",
-   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
    "listed_size": 1228,
    "local_path": "pub/quadras/46/LEIAME.txt",
    "name": "LEIAME.txt",
@@ -59,9 +59,9 @@
   "https://replica.local/caxias/pub/quadras/46/quadra_46.dwg": {
    "content_type": "image/vnd.dwg",
    "etag": null,
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "head": "9a0f64b8437f7a9b1b466d94a2c40ba9e3f8732615e58520b86f8283b206ca2d",
-   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
    "listed_size": 215040,
    "local_path": "pub/quadras/46/quadra_46.dwg",
    "name": "quadra_46.dwg",
@@ -73,9 +73,9 @@
   "https://replica.local/caxias/pub/quadras/46/quadra_46_lotes.kml": {
    "content_type": "application/vnd.google-earth.kml+xml",
    "etag": null,
-   "fetched_at": "2026-09-28T17:33:17Z",
+   "fetched_at": "2026-09-28T18:05:14Z",
    "head": "02436b07574e49377f003006bd22d56c1eb528707b9a249893f52ebd93ae69cd",
-   "last_modified": "Mon, 28 Sep 2026 17:33:17 GMT",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
    "listed_size": 30720,
    "local_path": "pub/quadras/46/quadra_46_lotes.kml",
    "name": "quadra_46_lotes.kml",
@@ -86,5 +86,5 @@
   }
  },
  "site": "geofiles.caxias.rs.gov.br",
- "updated": "2026-09-28T17:33:17Z"
+ "updated": "2026-09-28T18:05:14Z"
 }

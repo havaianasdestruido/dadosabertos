@@ -145,7 +145,7 @@ to re-check with `--no-range-probe` when byte-exactness matters.
 ## Tests
 
 ```bash
-python3 tests/run_tests.py -v          # 44 tests, no network access needed
+python3 tests/run_tests.py -v          # 50 tests, no network access needed
 ```
 
 * `TestHelpers` — URL canonicalisation (sort links, `?SA`-style parameters,
@@ -168,6 +168,10 @@ python3 tests/run_tests.py -v          # 44 tests, no network access needed
   to escape `_index/pages/` via `..` segments, `--rerun-hint`, dead links.
 * `TestRobotsAndErrors` — robots-disallowed URLs are recorded and skipped (and
   downloaded with `--ignore-robots`), 404s are reported without aborting.
+* `TestBudgetAccounting` / `TestLyingListingBudget` — a listing that understates
+  a size cannot defeat `--max-total-bytes`: bytes beyond the reserved amount are
+  charged as they stream, and a file whose real body does not fit is skipped and
+  never stored.
 * `TestProductionConfig` — `sites.json` really lists the six requested
   listings.
 
