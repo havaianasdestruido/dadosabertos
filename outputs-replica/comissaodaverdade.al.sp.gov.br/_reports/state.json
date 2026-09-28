@@ -1,0 +1,112 @@
+{
+ "files": {
+  "https://replica.local/comissao/upload/001%20-%20Ficha%20DEOPS%20Paulo%20Roberto%20Pinto.pdf": {
+   "content_type": "application/pdf",
+   "etag": null,
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "head": "4c45df4d047058ea699b2c6fa832123452d3eed84023f70122682efc03fe9fc2",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
+   "listed_size": null,
+   "local_path": "001 - Ficha DEOPS Paulo Roberto Pinto.pdf",
+   "name": "001 - Ficha DEOPS Paulo Roberto Pinto.pdf",
+   "remote_mtime": null,
+   "sha256": "4c45df4d047058ea699b2c6fa832123452d3eed84023f70122682efc03fe9fc2",
+   "size": 53248,
+   "tail": "4c45df4d047058ea699b2c6fa832123452d3eed84023f70122682efc03fe9fc2"
+  },
+  "https://replica.local/comissao/upload/001-Antonio-Raymundo-Lucena.pdf": {
+   "content_type": "application/pdf",
+   "etag": null,
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "head": "d12d6a54474ca90abacee77dd3672da05a2c7a52f3769f51e2977b153efd6c13",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
+   "listed_size": null,
+   "local_path": "001-Antonio-Raymundo-Lucena.pdf",
+   "name": "001-Antonio-Raymundo-Lucena.pdf",
+   "remote_mtime": null,
+   "sha256": "a807912f33c5b3062c9aaf616ee499cf285ed6b0f93ab8a70eb03e92a19325ee",
+   "size": 143360,
+   "tail": "21ce992a8866a4230c470b11ad26392fdcff291f3e4c798dd0588add5ac2c0a2"
+  },
+  "https://replica.local/comissao/upload/001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis.pdf": {
+   "content_type": "application/pdf",
+   "etag": null,
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "head": "101af2151fbed5abd9da2719e9b5d84eee355d2cac10dd664e5e660019738d8f",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
+   "listed_size": null,
+   "local_path": "001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis.pdf",
+   "name": "001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis.pdf",
+   "remote_mtime": null,
+   "sha256": "302000e3cd88caf65aaea50f53265ff46a02ec997790d14ae593695a227e600e",
+   "size": 90112,
+   "tail": "a3c6964ba24b6f4a5f6b1bb28e1d9b00d37f9c631283862ef82eb32e133dd21c"
+  },
+  "https://replica.local/comissao/upload/001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis004.pdf": {
+   "dedupe_method": "sha256",
+   "duplicate_of": "https://replica.local/comissao/upload/001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis.pdf",
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "listed_size": null,
+   "local_path": "001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis004.pdf",
+   "name": "001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis004.pdf",
+   "remote_mtime": null,
+   "sha256": "302000e3cd88caf65aaea50f53265ff46a02ec997790d14ae593695a227e600e",
+   "size": 90112
+  },
+  "https://replica.local/comissao/upload/001-ArquivoCEMDP-devanir.pdf": {
+   "content_type": "application/pdf",
+   "etag": null,
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "head": "c395464b53db3e9b4f1de7b32aee251e38e95236442ad8781680b0de586c00b1",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
+   "listed_size": null,
+   "local_path": "001-ArquivoCEMDP-devanir.pdf",
+   "name": "001-ArquivoCEMDP-devanir.pdf",
+   "remote_mtime": null,
+   "sha256": "c395464b53db3e9b4f1de7b32aee251e38e95236442ad8781680b0de586c00b1",
+   "size": 33792,
+   "tail": "c395464b53db3e9b4f1de7b32aee251e38e95236442ad8781680b0de586c00b1"
+  },
+  "https://replica.local/comissao/upload/001-ArquivoCEMDP.pdf": {
+   "dedupe_method": "sha256",
+   "duplicate_of": "https://replica.local/comissao/upload/001-ArquivoCEMDP-devanir.pdf",
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "listed_size": null,
+   "local_path": "001-ArquivoCEMDP.pdf",
+   "name": "001-ArquivoCEMDP.pdf",
+   "remote_mtime": null,
+   "sha256": "c395464b53db3e9b4f1de7b32aee251e38e95236442ad8781680b0de586c00b1",
+   "size": 33792
+  },
+  "https://replica.local/comissao/upload/001-CartaLilianRuggia1.jpg": {
+   "content_type": "image/jpeg",
+   "etag": null,
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "head": "b7d2077c2a9dec1f73034b804efb89c3be42939fdf2078241bd8fa601103fd21",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
+   "listed_size": null,
+   "local_path": "001-CartaLilianRuggia1.jpg",
+   "name": "001-CartaLilianRuggia1.jpg",
+   "remote_mtime": null,
+   "sha256": "f8be19c93d07a88423ce8efad10cc06ea03fd6f57b2a209e0e5aa312473dd7f2",
+   "size": 77824,
+   "tail": "f69858fb1335ff4de4451bff5ea93c8b9fdc79ccf0835c3923e081f94db30d23"
+  },
+  "https://replica.local/comissao/upload/001-Certidao-de-casamento.pdf": {
+   "content_type": "application/pdf",
+   "etag": null,
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "head": "da1d6bbbd649d033f357c309c7f745ace2e460177eead5e52a35ea9cdc27e2e3",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
+   "listed_size": null,
+   "local_path": "001-Certidao-de-casamento.pdf",
+   "name": "001-Certidao-de-casamento.pdf",
+   "remote_mtime": null,
+   "sha256": "698d66e90b821da2fbeb43124c7f0021d7cdfd1bd886fb6efb99d5aa5690df5f",
+   "size": 242688,
+   "tail": "03dd9b2271c6e4054f6344edde403faf6d7a45bbafb913a9e3d84012532fafd8"
+  }
+ },
+ "site": "comissaodaverdade.al.sp.gov.br",
+ "updated": "2026-09-28T18:05:14Z"
+}

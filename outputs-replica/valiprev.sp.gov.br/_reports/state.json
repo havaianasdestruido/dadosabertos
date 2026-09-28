@@ -1,0 +1,112 @@
+{
+ "files": {
+  "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA.pdf": {
+   "dedupe_method": "sha256",
+   "duplicate_of": "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf",
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "listed_size": 3800,
+   "local_path": "uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA.pdf",
+   "name": "10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA.pdf",
+   "remote_mtime": "2024-02-16T14:56:00Z",
+   "sha256": "a077779091c967a29cae454e291e5aa25f7cd29a60d57f3e1981cfc2bb0e8696",
+   "size": 3800
+  },
+  "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf": {
+   "content_type": "application/pdf",
+   "etag": null,
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "head": "a077779091c967a29cae454e291e5aa25f7cd29a60d57f3e1981cfc2bb0e8696",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
+   "listed_size": 3800,
+   "local_path": "uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf",
+   "name": "10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf",
+   "remote_mtime": "2024-02-19T09:38:00Z",
+   "sha256": "a077779091c967a29cae454e291e5aa25f7cd29a60d57f3e1981cfc2bb0e8696",
+   "size": 3800,
+   "tail": "a077779091c967a29cae454e291e5aa25f7cd29a60d57f3e1981cfc2bb0e8696"
+  },
+  "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA2.pdf": {
+   "dedupe_method": "sha256",
+   "duplicate_of": "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf",
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "listed_size": 3800,
+   "local_path": "uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA2.pdf",
+   "name": "10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA2.pdf",
+   "remote_mtime": "2024-11-18T09:02:00Z",
+   "sha256": "a077779091c967a29cae454e291e5aa25f7cd29a60d57f3e1981cfc2bb0e8696",
+   "size": 3800
+  },
+  "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/500.pdf": {
+   "content_type": "application/pdf",
+   "etag": null,
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "head": "2ac6e0a6775a7bf9d39c7dae90177dacc9d5f85362b3ca51a7723b93ce37197f",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
+   "listed_size": 396288,
+   "local_path": "uploads/paginas/certidoes/pdf/500.pdf",
+   "name": "500.pdf",
+   "remote_mtime": "2024-11-18T11:15:00Z",
+   "sha256": "b5dbb0ec2bca8499706214ff389700e9a6ce2791d8a37f1b4e0efeb0df9385a1",
+   "size": 396288,
+   "tail": "f42db832e72426531d0f4e60d4d208bd39df4b9395b68e46a69ef83376dae418"
+  },
+  "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/AUDI%C3%8ANCIA_2023_-_LISTA_DE_PRESEN%C3%87A.pdf": {
+   "content_type": "application/pdf",
+   "etag": null,
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "head": "2dc3e539e004a203b372656fa28b3418f312758342486dd589a4bafa466c852f",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
+   "listed_size": 346112,
+   "local_path": "uploads/paginas/certidoes/pdf/AUDI\u00caNCIA_2023_-_LISTA_DE_PRESEN\u00c7A.pdf",
+   "name": "AUDI\u00caNCIA_2023_-_LISTA_DE_PRESEN\u00c7A.pdf",
+   "remote_mtime": "2024-10-30T13:43:00Z",
+   "sha256": "872c9e514a046ce82bfbc64343535208b20047b39f760bbdea87af45d8822a85",
+   "size": 346112,
+   "tail": "58303dfd6bd1758f64c994dc55f1dc59d0da2c1ab21295ffae328812ee6bbb66"
+  },
+  "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/AUDI%C3%8ANCIA_2024_-_DI..X.pdf": {
+   "content_type": "application/pdf",
+   "etag": null,
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "head": "c2f01de93c8b39d3a846666455a41645e1f8a8ac94aaf4fd79db6b484ec77eca",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
+   "listed_size": 722944,
+   "local_path": "uploads/paginas/certidoes/pdf/AUDI\u00caNCIA_2024_-_DI..X.pdf",
+   "name": "AUDI\u00caNCIA_2024_-_DI..X.pdf",
+   "remote_mtime": "2024-10-30T14:28:00Z",
+   "sha256": "620d5c0f88d34da1a254f9608df09ac05bb705da46df9ef258a7d73304b62d34",
+   "size": 722944,
+   "tail": "9db08757086e4548655382c8d8a9271ffec13db156ff67c8267d3b34afb51844"
+  },
+  "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/AUDI%C3%8ANCIA_2024_-_LISTA_DE_PRESEN%C3%87A.pdf": {
+   "content_type": "application/pdf",
+   "etag": null,
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "head": "b96452ee61853e5e88c17660d5447bebf4522f747e9f8bb8aaf9e220ee42ad50",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
+   "listed_size": 675840,
+   "local_path": "uploads/paginas/certidoes/pdf/AUDI\u00caNCIA_2024_-_LISTA_DE_PRESEN\u00c7A.pdf",
+   "name": "AUDI\u00caNCIA_2024_-_LISTA_DE_PRESEN\u00c7A.pdf",
+   "remote_mtime": "2025-11-28T16:41:00Z",
+   "sha256": "22770e10b4fd84508b39dec205ee0d56c630e2ed7ed66fb5f80e039e551d0955",
+   "size": 675840,
+   "tail": "626f4614eb87e54226470145a31209cd0a2c7feeb86eb92bdc0e7b7464b1d6fe"
+  },
+  "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/CERTID%C3%83O_DE_REGULARIDADE_DO_FGTS.pdf": {
+   "content_type": "application/pdf",
+   "etag": null,
+   "fetched_at": "2026-09-28T18:05:14Z",
+   "head": "c27d5f411abb88f0df9d3d46f4b135f31fd60d0b6a66fab007ebd1653d79b00d",
+   "last_modified": "Mon, 28 Sep 2026 18:05:14 GMT",
+   "listed_size": 92160,
+   "local_path": "uploads/paginas/certidoes/pdf/CERTID\u00c3O_DE_REGULARIDADE_DO_FGTS.pdf",
+   "name": "CERTID\u00c3O_DE_REGULARIDADE_DO_FGTS.pdf",
+   "remote_mtime": "2024-11-12T17:00:00Z",
+   "sha256": "b0e501bf22aba1edb02e952c47bb56881874d2ea973f927f343397ae5fb25b02",
+   "size": 92160,
+   "tail": "0a04215bb0ff5e31e64342a3075a6de29bfe46392e3318e7d034c51a0c0db755"
+  }
+ },
+ "site": "valiprev.sp.gov.br",
+ "updated": "2026-09-28T18:05:14Z"
+}

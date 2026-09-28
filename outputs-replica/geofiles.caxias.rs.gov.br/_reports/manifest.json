@@ -1,0 +1,121 @@
+{
+ "generated_at": "2026-09-28T18:05:14Z",
+ "tool": "indexclone 1.0.0",
+ "summary": {
+  "site": "geofiles.caxias.rs.gov.br",
+  "url": "https://replica.local/caxias/",
+  "entry_urls": [
+   "https://replica.local/caxias/"
+  ],
+  "title": "Geofiles Caxias do Sul — quadras (replica)",
+  "note": "nginx autoindex keeps the literal '..' anchor; directories are reached through a 301 redirect to the trailing-slash URL.",
+  "started": "2026-09-28T18:05:14Z",
+  "finished": "2026-09-28T18:05:14Z",
+  "elapsed_s": 0.01,
+  "listing_pages": 5,
+  "documents_discovered": 6,
+  "documents_fetched": 6,
+  "documents_bytes": 493920,
+  "bytes_downloaded_this_run": 493920,
+  "duplicates": 0,
+  "duplicate_bytes_collapsed": 0,
+  "candidate_duplicates": 0,
+  "errors": 0,
+  "status_counts": {
+   "downloaded": 6
+  },
+  "dry_run": false
+ },
+ "files": [
+  {
+   "url": "https://replica.local/caxias/pub/quadras/45/LEIAME.txt",
+   "name": "LEIAME.txt",
+   "size": 1200,
+   "remote_mtime": "2024-03-11T08:22:00Z",
+   "status": "downloaded",
+   "local_path": "pub/quadras/45/LEIAME.txt",
+   "sha256": "7d6a0f8fe51ec2bce1454e96c94043ee0988d84f63751b667b007164a9dbaa25",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "text/plain",
+   "error": null,
+   "duration_s": 0.004
+  },
+  {
+   "url": "https://replica.local/caxias/pub/quadras/45/quadra_45.dwg",
+   "name": "quadra_45.dwg",
+   "size": 215040,
+   "remote_mtime": "2024-03-11T08:22:00Z",
+   "status": "downloaded",
+   "local_path": "pub/quadras/45/quadra_45.dwg",
+   "sha256": "1c21731fcf1839b889fe1f975dd8d31ac135246a467629e33a812dfee30d5147",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "image/vnd.dwg",
+   "error": null,
+   "duration_s": 0.007
+  },
+  {
+   "url": "https://replica.local/caxias/pub/quadras/45/quadra_45_lotes.kml",
+   "name": "quadra_45_lotes.kml",
+   "size": 30720,
+   "remote_mtime": "2024-03-11T08:22:00Z",
+   "status": "downloaded",
+   "local_path": "pub/quadras/45/quadra_45_lotes.kml",
+   "sha256": "84e6814432fae5279f2188e9efce48234c62a6d21694afcae9d956e6d8c58692",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "error": null,
+   "duration_s": 0.004
+  },
+  {
+   "url": "https://replica.local/caxias/pub/quadras/46/LEIAME.txt",
+   "name": "LEIAME.txt",
+   "size": 1200,
+   "remote_mtime": null,
+   "status": "downloaded",
+   "local_path": "pub/quadras/46/LEIAME.txt",
+   "sha256": "0697ad37cc970f911febf415e14ff133089cbe2d21911c217aced6761ea4f324",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "text/plain",
+   "error": null,
+   "duration_s": 0.004
+  },
+  {
+   "url": "https://replica.local/caxias/pub/quadras/46/quadra_46.dwg",
+   "name": "quadra_46.dwg",
+   "size": 215040,
+   "remote_mtime": null,
+   "status": "downloaded",
+   "local_path": "pub/quadras/46/quadra_46.dwg",
+   "sha256": "a47ac306db8d3160b93d4120a56fadeaf0fca0bcd19951223f429e036700b75f",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "image/vnd.dwg",
+   "error": null,
+   "duration_s": 0.007
+  },
+  {
+   "url": "https://replica.local/caxias/pub/quadras/46/quadra_46_lotes.kml",
+   "name": "quadra_46_lotes.kml",
+   "size": 30720,
+   "remote_mtime": null,
+   "status": "downloaded",
+   "local_path": "pub/quadras/46/quadra_46_lotes.kml",
+   "sha256": "02436b07574e49377f003006bd22d56c1eb528707b9a249893f52ebd93ae69cd",
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": "application/vnd.google-earth.kml+xml",
+   "error": null,
+   "duration_s": 0.004
+  }
+ ]
+}

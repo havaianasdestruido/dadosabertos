@@ -1,0 +1,288 @@
+{
+ "generated_at": "2026-09-28T18:05:14Z",
+ "tool": "indexclone 1.0.0",
+ "sites": [
+  {
+   "site": "dadosabertos.pgfn.gov.br",
+   "url": "https://replica.local/pgfn/",
+   "entry_urls": [
+    "https://replica.local/pgfn/"
+   ],
+   "title": "Dados Abertos PGFN (replica)",
+   "note": "Bullet-style index without sizes: the crawler decides file-vs-directory by probing. The FGTS archive is repeated in every quarter -> collapsed by the byte probe.",
+   "started": "2026-09-28T18:05:14Z",
+   "finished": "2026-09-28T18:05:14Z",
+   "elapsed_s": 0.02,
+   "listing_pages": 4,
+   "documents_discovered": 7,
+   "documents_fetched": 7,
+   "documents_bytes": 1105920,
+   "bytes_downloaded_this_run": 1105920,
+   "duplicates": 3,
+   "duplicate_bytes_collapsed": 1064960,
+   "candidate_duplicates": 0,
+   "errors": 0,
+   "status_counts": {
+    "downloaded": 4,
+    "duplicate": 3
+   },
+   "dry_run": false
+  },
+  {
+   "site": "valiprev.sp.gov.br",
+   "url": "https://replica.local/valiprev/",
+   "entry_urls": [
+    "https://replica.local/valiprev/"
+   ],
+   "title": "Valiprev — certidões e audiências (replica)",
+   "note": "Apache table dialect: names are truncated in the visible cell and recovered from the link title/URL. The three DISPENSA files share identical bytes (a real pattern on this site).",
+   "started": "2026-09-28T18:05:14Z",
+   "finished": "2026-09-28T18:05:14Z",
+   "elapsed_s": 0.02,
+   "listing_pages": 5,
+   "documents_discovered": 8,
+   "documents_fetched": 8,
+   "documents_bytes": 2237144,
+   "bytes_downloaded_this_run": 2244744,
+   "duplicates": 2,
+   "duplicate_bytes_collapsed": 7600,
+   "candidate_duplicates": 0,
+   "errors": 0,
+   "status_counts": {
+    "downloaded": 6,
+    "duplicate": 2
+   },
+   "dry_run": false
+  },
+  {
+   "site": "geofiles.caxias.rs.gov.br",
+   "url": "https://replica.local/caxias/",
+   "entry_urls": [
+    "https://replica.local/caxias/"
+   ],
+   "title": "Geofiles Caxias do Sul — quadras (replica)",
+   "note": "nginx autoindex keeps the literal '..' anchor; directories are reached through a 301 redirect to the trailing-slash URL.",
+   "started": "2026-09-28T18:05:14Z",
+   "finished": "2026-09-28T18:05:14Z",
+   "elapsed_s": 0.01,
+   "listing_pages": 5,
+   "documents_discovered": 6,
+   "documents_fetched": 6,
+   "documents_bytes": 493920,
+   "bytes_downloaded_this_run": 493920,
+   "duplicates": 0,
+   "duplicate_bytes_collapsed": 0,
+   "candidate_duplicates": 0,
+   "errors": 0,
+   "status_counts": {
+    "downloaded": 6
+   },
+   "dry_run": false
+  },
+  {
+   "site": "macau.rn.gov.br",
+   "url": "https://replica.local/macau/diario/",
+   "entry_urls": [
+    "https://replica.local/macau/diario/"
+   ],
+   "title": "Diário Oficial de Macau (replica)",
+   "note": "Pure link farm: every href lacks a trailing slash, a date and a size, so each one is probed. Two 2013 editions are byte-identical under different names.",
+   "started": "2026-09-28T18:05:14Z",
+   "finished": "2026-09-28T18:05:14Z",
+   "elapsed_s": 0.01,
+   "listing_pages": 5,
+   "documents_discovered": 5,
+   "documents_fetched": 5,
+   "documents_bytes": 552960,
+   "bytes_downloaded_this_run": 706560,
+   "duplicates": 1,
+   "duplicate_bytes_collapsed": 153600,
+   "candidate_duplicates": 0,
+   "errors": 0,
+   "status_counts": {
+    "downloaded": 4,
+    "duplicate": 1
+   },
+   "dry_run": false
+  },
+  {
+   "site": "comissaodaverdade.al.sp.gov.br",
+   "url": "https://replica.local/comissao/upload/",
+   "entry_urls": [
+    "https://replica.local/comissao/upload/"
+   ],
+   "title": "Comissão da Verdade ALESP — acervo (replica)",
+   "note": "Links without metadata; content-identical documents appear under different names ('001-ArquivoCEMDP.pdf' vs '...-devanir.pdf'), which is exactly what the SHA-256 deduper is for.",
+   "started": "2026-09-28T18:05:14Z",
+   "finished": "2026-09-28T18:05:14Z",
+   "elapsed_s": 0.01,
+   "listing_pages": 1,
+   "documents_discovered": 8,
+   "documents_fetched": 8,
+   "documents_bytes": 641024,
+   "bytes_downloaded_this_run": 764928,
+   "duplicates": 2,
+   "duplicate_bytes_collapsed": 123904,
+   "candidate_duplicates": 0,
+   "errors": 0,
+   "status_counts": {
+    "downloaded": 6,
+    "duplicate": 2
+   },
+   "dry_run": false
+  },
+  {
+   "site": "dados.cvm.gov.br",
+   "url": "https://replica.local/cvm/dados/",
+   "entry_urls": [
+    "https://replica.local/cvm/dados/"
+   ],
+   "title": "Portal Dados Abertos CVM (replica)",
+   "note": "Apache <pre> index with dates and human sizes; 'CIA_ABERTA' and 'FIDC' both publish a 96 KiB 'doc' archive with identical bytes, while 'cia_aberta_fre_2025.zip' has the same size with different content — the deduper must collapse the first pair only.",
+   "started": "2026-09-28T18:05:14Z",
+   "finished": "2026-09-28T18:05:14Z",
+   "elapsed_s": 0.01,
+   "listing_pages": 4,
+   "documents_discovered": 5,
+   "documents_fetched": 5,
+   "documents_bytes": 314368,
+   "bytes_downloaded_this_run": 412672,
+   "duplicates": 1,
+   "duplicate_bytes_collapsed": 98304,
+   "candidate_duplicates": 0,
+   "errors": 0,
+   "status_counts": {
+    "downloaded": 4,
+    "duplicate": 1
+   },
+   "dry_run": false
+  }
+ ],
+ "totals": {
+  "sites": 6,
+  "documents_discovered": 39,
+  "documents_fetched": 39,
+  "bytes_downloaded": 5345336,
+  "duplicates_collapsed": 9,
+  "candidate_duplicates": 0,
+  "bytes_saved_by_dedupe": 1448368,
+  "errors": 0
+ },
+ "duplicate_groups": {
+  "f82f79411cd8f4ebcda4f70ff4578daf37f32c20c0e0cd86376fcf23da54c9ee": [
+   {
+    "site": "dadosabertos.pgfn.gov.br",
+    "sha256": "f82f79411cd8f4ebcda4f70ff4578daf37f32c20c0e0cd86376fcf23da54c9ee",
+    "size": 307200,
+    "duplicate_url": "https://replica.local/pgfn/2025_trimestre_04/Dados_abertos_FGTS.zip",
+    "duplicate_path": "2025_trimestre_04/Dados_abertos_FGTS.zip",
+    "kept_url": "https://replica.local/pgfn/2025_trimestre_03/Dados_abertos_FGTS.zip",
+    "kept_path": "2025_trimestre_03/Dados_abertos_FGTS.zip",
+    "method": "range-probe",
+    "action": "stored as hardlink"
+   }
+  ],
+  "b3f1d00fb5624bce4043d9de7f6a621f32c75eb3135b9005857bd4d72a10aee6": [
+   {
+    "site": "dadosabertos.pgfn.gov.br",
+    "sha256": "b3f1d00fb5624bce4043d9de7f6a621f32c75eb3135b9005857bd4d72a10aee6",
+    "size": 327680,
+    "duplicate_url": "https://replica.local/pgfn/2025_trimestre_04/Dados_abertos_Nao_Previdenciario.zip",
+    "duplicate_path": "2025_trimestre_04/Dados_abertos_Nao_Previdenciario.zip",
+    "kept_url": "https://replica.local/pgfn/2025_trimestre_03/Dados_abertos_Nao_Previdenciario.zip",
+    "kept_path": "2025_trimestre_03/Dados_abertos_Nao_Previdenciario.zip",
+    "method": "range-probe",
+    "action": "stored as hardlink"
+   }
+  ],
+  "46280c782398c7b1bf557f51a946317e0709ef14c68d89d9bb1da5124c91c1e0": [
+   {
+    "site": "dadosabertos.pgfn.gov.br",
+    "sha256": "46280c782398c7b1bf557f51a946317e0709ef14c68d89d9bb1da5124c91c1e0",
+    "size": 430080,
+    "duplicate_url": "https://replica.local/pgfn/2025_trimestre_04/Dados_abertos_Previdenciario.zip",
+    "duplicate_path": "2025_trimestre_04/Dados_abertos_Previdenciario.zip",
+    "kept_url": "https://replica.local/pgfn/2025_trimestre_03/Dados_abertos_Previdenciario.zip",
+    "kept_path": "2025_trimestre_03/Dados_abertos_Previdenciario.zip",
+    "method": "range-probe",
+    "action": "stored as hardlink"
+   }
+  ],
+  "a077779091c967a29cae454e291e5aa25f7cd29a60d57f3e1981cfc2bb0e8696": [
+   {
+    "site": "valiprev.sp.gov.br",
+    "sha256": "a077779091c967a29cae454e291e5aa25f7cd29a60d57f3e1981cfc2bb0e8696",
+    "size": 3800,
+    "duplicate_url": "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA.pdf",
+    "duplicate_path": "uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA.pdf",
+    "kept_url": "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf",
+    "kept_path": "uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf",
+    "method": "sha256",
+    "action": "stored as hardlink"
+   },
+   {
+    "site": "valiprev.sp.gov.br",
+    "sha256": "a077779091c967a29cae454e291e5aa25f7cd29a60d57f3e1981cfc2bb0e8696",
+    "size": 3800,
+    "duplicate_url": "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA2.pdf",
+    "duplicate_path": "uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA2.pdf",
+    "kept_url": "https://replica.local/valiprev/uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf",
+    "kept_path": "uploads/paginas/certidoes/pdf/10_2023-LGPD-ARTE-VISUAL-E-IMPRESSAO-DAS-ELEICOES-DO-CONSELHO-DISPENSA1.pdf",
+    "method": "sha256",
+    "action": "stored as hardlink"
+   }
+  ],
+  "b4183265d26ec127f9a7c25edeb7c217528113140328d06de2445c1fcd65bb67": [
+   {
+    "site": "macau.rn.gov.br",
+    "sha256": "b4183265d26ec127f9a7c25edeb7c217528113140328d06de2445c1fcd65bb67",
+    "size": 153600,
+    "duplicate_url": "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/03%20-%20Mar%C3%A7o-2013/macau-2013-03-11-edicao-2.pdf",
+    "duplicate_path": "2013 - Diário Oficial de Macau/03 - Março-2013/macau-2013-03-11-edicao-2.pdf",
+    "kept_url": "https://replica.local/macau/diario/2013%20-%20Di%C3%A1rio%20Oficial%20de%20Macau/01%20-%20Janeiro-2013/macau-2013-01-02.pdf",
+    "kept_path": "2013 - Diário Oficial de Macau/01 - Janeiro-2013/macau-2013-01-02.pdf",
+    "method": "sha256",
+    "action": "stored as hardlink"
+   }
+  ],
+  "302000e3cd88caf65aaea50f53265ff46a02ec997790d14ae593695a227e600e": [
+   {
+    "site": "comissaodaverdade.al.sp.gov.br",
+    "sha256": "302000e3cd88caf65aaea50f53265ff46a02ec997790d14ae593695a227e600e",
+    "size": 90112,
+    "duplicate_url": "https://replica.local/comissao/upload/001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis004.pdf",
+    "duplicate_path": "001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis004.pdf",
+    "kept_url": "https://replica.local/comissao/upload/001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis.pdf",
+    "kept_path": "001-Arquivo-CEMDP-Joao-Carlos-Cavalcanti-Reis.pdf",
+    "method": "sha256",
+    "action": "stored as hardlink"
+   }
+  ],
+  "c395464b53db3e9b4f1de7b32aee251e38e95236442ad8781680b0de586c00b1": [
+   {
+    "site": "comissaodaverdade.al.sp.gov.br",
+    "sha256": "c395464b53db3e9b4f1de7b32aee251e38e95236442ad8781680b0de586c00b1",
+    "size": 33792,
+    "duplicate_url": "https://replica.local/comissao/upload/001-ArquivoCEMDP.pdf",
+    "duplicate_path": "001-ArquivoCEMDP.pdf",
+    "kept_url": "https://replica.local/comissao/upload/001-ArquivoCEMDP-devanir.pdf",
+    "kept_path": "001-ArquivoCEMDP-devanir.pdf",
+    "method": "sha256",
+    "action": "stored as hardlink"
+   }
+  ],
+  "a92b87949ab070b76c244aa57c51a6c3d033e343e7f5e409a93181440c6b3ccc": [
+   {
+    "site": "dados.cvm.gov.br",
+    "sha256": "a92b87949ab070b76c244aa57c51a6c3d033e343e7f5e409a93181440c6b3ccc",
+    "size": 98304,
+    "duplicate_url": "https://replica.local/cvm/dados/FIDC/fidc_doc_2025.zip",
+    "duplicate_path": "FIDC/fidc_doc_2025.zip",
+    "kept_url": "https://replica.local/cvm/dados/CIA_ABERTA/cia_aberta_doc_2025.zip",
+    "kept_path": "CIA_ABERTA/cia_aberta_doc_2025.zip",
+    "method": "sha256",
+    "action": "stored as hardlink"
+   }
+  ]
+ }
+}

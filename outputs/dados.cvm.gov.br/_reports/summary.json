@@ -1,0 +1,29 @@
+{
+ "site": "dados.cvm.gov.br",
+ "url": "https://dados.cvm.gov.br/dados/",
+ "entry_urls": [
+  "https://dados.cvm.gov.br/dados/",
+  "https://dados.cvm.gov.br/dados/ADM_CART/",
+  "https://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/",
+  "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/",
+  "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/"
+ ],
+ "title": "",
+ "note": "",
+ "started": "2026-09-28T18:05:13Z",
+ "finished": "2026-09-28T18:05:13Z",
+ "elapsed_s": 0,
+ "listing_pages": 5,
+ "documents_discovered": 18,
+ "documents_fetched": 0,
+ "documents_bytes": 0,
+ "bytes_downloaded_this_run": 0,
+ "duplicates": 0,
+ "duplicate_bytes_collapsed": 0,
+ "candidate_duplicates": 23,
+ "errors": 0,
+ "status_counts": {
+  "dry_run": 18
+ },
+ "dry_run": true
+}

@@ -1,0 +1,7 @@
+url,local_path,name,size,sha256,status,remote_mtime,http_status,content_type,dupe_of,dupe_method,duration_s,error
+https://replica.local/caxias/pub/quadras/45/LEIAME.txt,pub/quadras/45/LEIAME.txt,LEIAME.txt,1200,7d6a0f8fe51ec2bce1454e96c94043ee0988d84f63751b667b007164a9dbaa25,downloaded,2024-03-11T08:22:00Z,,text/plain,,,0.004,
+https://replica.local/caxias/pub/quadras/45/quadra_45.dwg,pub/quadras/45/quadra_45.dwg,quadra_45.dwg,215040,1c21731fcf1839b889fe1f975dd8d31ac135246a467629e33a812dfee30d5147,downloaded,2024-03-11T08:22:00Z,,image/vnd.dwg,,,0.007,
+https://replica.local/caxias/pub/quadras/45/quadra_45_lotes.kml,pub/quadras/45/quadra_45_lotes.kml,quadra_45_lotes.kml,30720,84e6814432fae5279f2188e9efce48234c62a6d21694afcae9d956e6d8c58692,downloaded,2024-03-11T08:22:00Z,,application/vnd.google-earth.kml+xml,,,0.004,
+https://replica.local/caxias/pub/quadras/46/LEIAME.txt,pub/quadras/46/LEIAME.txt,LEIAME.txt,1200,0697ad37cc970f911febf415e14ff133089cbe2d21911c217aced6761ea4f324,downloaded,,,text/plain,,,0.004,
+https://replica.local/caxias/pub/quadras/46/quadra_46.dwg,pub/quadras/46/quadra_46.dwg,quadra_46.dwg,215040,a47ac306db8d3160b93d4120a56fadeaf0fca0bcd19951223f429e036700b75f,downloaded,,,image/vnd.dwg,,,0.007,
+https://replica.local/caxias/pub/quadras/46/quadra_46_lotes.kml,pub/quadras/46/quadra_46_lotes.kml,quadra_46_lotes.kml,30720,02436b07574e49377f003006bd22d56c1eb528707b9a249893f52ebd93ae69cd,downloaded,,,application/vnd.google-earth.kml+xml,,,0.004,

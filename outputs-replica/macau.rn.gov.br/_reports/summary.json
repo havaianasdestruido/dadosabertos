@@ -1,0 +1,26 @@
+{
+ "site": "macau.rn.gov.br",
+ "url": "https://replica.local/macau/diario/",
+ "entry_urls": [
+  "https://replica.local/macau/diario/"
+ ],
+ "title": "Diário Oficial de Macau (replica)",
+ "note": "Pure link farm: every href lacks a trailing slash, a date and a size, so each one is probed. Two 2013 editions are byte-identical under different names.",
+ "started": "2026-09-28T18:05:14Z",
+ "finished": "2026-09-28T18:05:14Z",
+ "elapsed_s": 0.01,
+ "listing_pages": 5,
+ "documents_discovered": 5,
+ "documents_fetched": 5,
+ "documents_bytes": 552960,
+ "bytes_downloaded_this_run": 706560,
+ "duplicates": 1,
+ "duplicate_bytes_collapsed": 153600,
+ "candidate_duplicates": 0,
+ "errors": 0,
+ "status_counts": {
+  "downloaded": 4,
+  "duplicate": 1
+ },
+ "dry_run": false
+}

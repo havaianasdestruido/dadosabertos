@@ -1,0 +1,26 @@
+{
+ "site": "comissaodaverdade.al.sp.gov.br",
+ "url": "https://replica.local/comissao/upload/",
+ "entry_urls": [
+  "https://replica.local/comissao/upload/"
+ ],
+ "title": "Comissão da Verdade ALESP — acervo (replica)",
+ "note": "Links without metadata; content-identical documents appear under different names ('001-ArquivoCEMDP.pdf' vs '...-devanir.pdf'), which is exactly what the SHA-256 deduper is for.",
+ "started": "2026-09-28T18:05:14Z",
+ "finished": "2026-09-28T18:05:14Z",
+ "elapsed_s": 0.01,
+ "listing_pages": 1,
+ "documents_discovered": 8,
+ "documents_fetched": 8,
+ "documents_bytes": 641024,
+ "bytes_downloaded_this_run": 764928,
+ "duplicates": 2,
+ "duplicate_bytes_collapsed": 123904,
+ "candidate_duplicates": 0,
+ "errors": 0,
+ "status_counts": {
+  "downloaded": 6,
+  "duplicate": 2
+ },
+ "dry_run": false
+}

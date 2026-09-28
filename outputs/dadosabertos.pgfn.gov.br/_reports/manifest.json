@@ -1,0 +1,122 @@
+{
+ "generated_at": "2026-09-28T18:05:13Z",
+ "tool": "indexclone 1.0.0",
+ "summary": {
+  "site": "dadosabertos.pgfn.gov.br",
+  "url": "https://dadosabertos.pgfn.gov.br/",
+  "entry_urls": [
+   "https://dadosabertos.pgfn.gov.br/",
+   "https://dadosabertos.pgfn.gov.br/2025_trimestre_04/"
+  ],
+  "title": "",
+  "note": "",
+  "started": "2026-09-28T18:05:13Z",
+  "finished": "2026-09-28T18:05:13Z",
+  "elapsed_s": 0,
+  "listing_pages": 2,
+  "documents_discovered": 6,
+  "documents_fetched": 0,
+  "documents_bytes": 0,
+  "bytes_downloaded_this_run": 0,
+  "duplicates": 0,
+  "duplicate_bytes_collapsed": 0,
+  "candidate_duplicates": 0,
+  "errors": 0,
+  "status_counts": {
+   "dry_run": 6
+  },
+  "dry_run": true
+ },
+ "files": [
+  {
+   "url": "https://dadosabertos.pgfn.gov.br/2025_trimestre_04/Dados_abertos_FGTS.zip",
+   "name": "Dados_abertos_FGTS.zip",
+   "size": null,
+   "remote_mtime": null,
+   "status": "dry_run",
+   "local_path": null,
+   "sha256": null,
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": null,
+   "error": null,
+   "duration_s": null
+  },
+  {
+   "url": "https://dadosabertos.pgfn.gov.br/2025_trimestre_04/Dados_abertos_Nao_Previdenciario.zip",
+   "name": "Dados_abertos_Nao_Previdenciario.zip",
+   "size": null,
+   "remote_mtime": null,
+   "status": "dry_run",
+   "local_path": null,
+   "sha256": null,
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": null,
+   "error": null,
+   "duration_s": null
+  },
+  {
+   "url": "https://dadosabertos.pgfn.gov.br/2025_trimestre_04/Dados_abertos_Previdenciario.zip",
+   "name": "Dados_abertos_Previdenciario.zip",
+   "size": null,
+   "remote_mtime": null,
+   "status": "dry_run",
+   "local_path": null,
+   "sha256": null,
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": null,
+   "error": null,
+   "duration_s": null
+  },
+  {
+   "url": "https://dadosabertos.pgfn.gov.br/Dados_abertos_FGTS.zip",
+   "name": "Dados_abertos_FGTS.zip",
+   "size": null,
+   "remote_mtime": null,
+   "status": "dry_run",
+   "local_path": null,
+   "sha256": null,
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": null,
+   "error": null,
+   "duration_s": null
+  },
+  {
+   "url": "https://dadosabertos.pgfn.gov.br/Dados_abertos_Nao_Previdenciario.zip",
+   "name": "Dados_abertos_Nao_Previdenciario.zip",
+   "size": null,
+   "remote_mtime": null,
+   "status": "dry_run",
+   "local_path": null,
+   "sha256": null,
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": null,
+   "error": null,
+   "duration_s": null
+  },
+  {
+   "url": "https://dadosabertos.pgfn.gov.br/Dados_abertos_Previdenciario.zip",
+   "name": "Dados_abertos_Previdenciario.zip",
+   "size": null,
+   "remote_mtime": null,
+   "status": "dry_run",
+   "local_path": null,
+   "sha256": null,
+   "dupe_of": null,
+   "dupe_method": null,
+   "http_status": null,
+   "content_type": null,
+   "error": null,
+   "duration_s": null
+  }
+ ]
+}

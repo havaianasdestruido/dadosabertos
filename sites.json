@@ -1,0 +1,53 @@
+{
+  "_comment": "Production config for scraper.py: the six public listings requested. `?SA` on the valiprev URL is only a sort parameter, so the bare directory is used here; the crawler strips sort/filter query strings anyway, which also keeps Apache's ?C=N;O=A links from looking like six different folders. Every site gets its own folder under --out.",
+  "defaults": {
+    "max_depth": 4,
+    "jobs": 4,
+    "rate": 2.0,
+    "user_agent": "indexclone/1.0 (+data mirroring; contact the site owner before large runs)"
+  },
+  "sites": [
+    {
+      "slug": "dadosabertos.pgfn.gov.br",
+      "url": "https://dadosabertos.pgfn.gov.br/",
+      "title": "Dados Abertos — Procuradoria-Geral da Fazenda Nacional (FGTS, previdenciário, não previdenciário)",
+      "note": "Three ZIPs per quarter, re-published in every quarter folder, plus the same three at the root. A quarterly folder and the root copy of an archive hold the same bytes, so the byte probe collapses most of the volume: expect roughly 4x fewer bytes fetched than listed. The listing publishes no sizes or dates.",
+      "max_depth": 3
+    },
+    {
+      "slug": "valiprev.sp.gov.br",
+      "url": "https://valiprev.sp.gov.br/uploads/paginas/certidoes/pdf/",
+      "title": "Valiprev — certidões e publicações (PDF)",
+      "note": "Apache 2.4 table listing; a single flat folder of ~180 PDFs with many re-publications (…1.pdf, …2.pdf, …_compressed.pdf). File names are percent-encoded UTF-8; the table cells are truncated, so sizes/dates are read from the data-sort-value attributes. This folder is the worst case for redundancy: thousands of bytes of near-identical names.",
+      "max_depth": 2
+    },
+    {
+      "slug": "geofiles.caxias.rs.gov.br",
+      "url": "https://geofiles.caxias.rs.gov.br/pub/quadras/45/",
+      "title": "GeoFiles Caxias do Sul — quadras (DWG/KML)",
+      "note": "nginx autoindex without metadata. Depth 4 reaches the per-quadra folders (~1-3 files each). NOTE: the host could not be reached from this environment (the sandbox has no egress to *.gov.br / *.rs.gov.br), so no listing was captured; run `python3 scraper.py --config sites.json --site geofiles.caxias.rs.gov.br --dry-run` from a normal network first to see what it exposes.",
+      "max_depth": 4
+    },
+    {
+      "slug": "macau.rn.gov.br",
+      "url": "https://macau.rn.gov.br/diario/",
+      "title": "Prefeitura de Macau/RN — Diário Oficial (2013–hoje)",
+      "note": "Hundreds of daily PDFs across 13 year folders x 12 month folders. The listing links carry no size/date at all, so the crawler range-probes each link to tell a folder from a document. Big but flat; --max-file-bytes / --include are worth setting if you only need some years.",
+      "max_depth": 3
+    },
+    {
+      "slug": "comissaodaverdade.al.sp.gov.br",
+      "url": "https://comissaodaverdade.al.sp.gov.br/upload/",
+      "title": "Comissão da Verdade do Estado de São Paulo — 'Rubens Paiva' (arquivos)",
+      "note": "~3000 files in one flat uploads folder, a mix of .pdf/.jpg/.png, several above 100 MB (the largest dossiê is ~161 MB). Names repeat with numeric suffixes and re-scans of the same document are common. Consider --max-file-bytes 50000000 for a first pass; every skipped document stays in manifest.csv with a reason.",
+      "max_depth": 2
+    },
+    {
+      "slug": "dados.cvm.gov.br",
+      "url": "https://dados.cvm.gov.br/dados/",
+      "title": "CVM — Portal de Dados Abertos (companhias, fundos, ofertas, …)",
+      "note": "~24 datasets (CIA_ABERTA, FI, FIDC, FII, OFERTA, PROCESSO, SECURIT, …), each with CAD/DOC/… subfolders and yearly archives; the same archive is often published under more than one dataset, which cross-folder de-duplication collapses. This is the largest tree here: use --include/--exclude or --max-depth to slice it.",
+      "max_depth": 5
+    }
+  ]
+}
