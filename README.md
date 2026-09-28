@@ -25,9 +25,9 @@ platform's page reader** on 2026-09-28. Concretely:
 
 | what | where | how it was produced |
 | --- | --- | --- |
-| real listing inventory (URLs, sizes, dates, duplicate candidates) | `outputs/<slug>/` | `python3 tools/snapshot_inventory.py` — crawls the captured listings (offline) |
+| real listing inventory: 127 documents with their published names, sizes and dates | `outputs/<slug>/` | `python3 tools/snapshot_inventory.py` — crawls the captured listing pages (offline) |
 | full run, real bytes over HTTP: download → hash → dedupe → hardlink → report → resume | `outputs-replica/<slug>/` | `python3 tools/replica_demo.py --second-run` |
-| listing captures (verbatim names/dates/sizes) | `tests/fixtures/real/*.tsv` | read from the six sites; see that folder's README for coverage |
+| listing captures (verbatim names/dates/sizes) | `tests/fixtures/real/*.tsv` | read from the five reachable sites; see that folder's README for coverage |
 | offline replica of the six dialects | generated (git-ignored) | `python3 tests/make_replica.py` |
 
 On a machine with normal internet access the only change is the config — there

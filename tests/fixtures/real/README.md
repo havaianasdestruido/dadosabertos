@@ -28,9 +28,9 @@ under `outputs/`.
 | dadosabertos.pgfn.gov.br | `pgfn_root.tsv`, `pgfn_2025_trimestre_04.tsv` | full root (27 quarters + 3 archives + 1 folder) and one quarter |
 | valiprev.sp.gov.br | `valiprev_pdf.tsv` | 54 of ~120 files of the `certidoes/pdf` listing (the duplicate families are all present) |
 | geofiles.caxias.rs.gov.br | – | the fetcher could not read this host at all (tried twice); only the offline replica covers the nginx dialect |
-| macau.rn.gov.br | `macau_root.tsv`, `macau_2013.tsv` | full root (2013–2026) and the 2013 month list |
+| macau.rn.gov.br | `macau_root.tsv`, `macau_2013.tsv`, `macau_2013_03.tsv` | full root (2013–2026), the 2013 month list and the 8 editions of March 2013 |
 | comissaodaverdade.al.sp.gov.br | `comissao_upload.tsv` | the first 42 of ~3 000 documents |
-| dados.cvm.gov.br | `cvm_root.tsv`, `cvm_cad.tsv` | full root (24 datasets) and the `ADM_CART/CAD` level |
+| dados.cvm.gov.br | `cvm_root.tsv`, `cvm_cad.tsv`, `cvm_cia_aberta_dados.tsv`, `cvm_cia_aberta_doc.tsv`, `cvm_cia_aberta_doc_dfp_dados.tsv` | full root (24 datasets), `ADM_CART/CAD`, `CIA_ABERTA/CAD/DADOS`, `CIA_ABERTA/DOC` and the 17 yearly DFP archives |
 
 Names, dates and sizes are exactly as published; the HTML is generated, so
 byte-level markup is *not* a copy of the server response (the listing

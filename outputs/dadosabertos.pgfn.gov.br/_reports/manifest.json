@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-28T13:07:20Z",
+ "generated_at": "2026-09-28T13:07:44Z",
  "tool": "indexclone 1.0.0",
  "summary": {
   "site": "dadosabertos.pgfn.gov.br",
@@ -10,8 +10,8 @@
   ],
   "title": "",
   "note": "",
-  "started": "2026-09-28T13:07:20Z",
-  "finished": "2026-09-28T13:07:20Z",
+  "started": "2026-09-28T13:07:44Z",
+  "finished": "2026-09-28T13:07:44Z",
   "elapsed_s": 0,
   "listing_pages": 28,
   "documents_discovered": 6,

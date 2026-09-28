@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-28T13:07:21Z",
+ "generated_at": "2026-09-28T13:07:44Z",
  "tool": "indexclone 1.0.0",
  "sites": [
   {
@@ -11,8 +11,8 @@
    ],
    "title": "",
    "note": "",
-   "started": "2026-09-28T13:07:20Z",
-   "finished": "2026-09-28T13:07:20Z",
+   "started": "2026-09-28T13:07:44Z",
+   "finished": "2026-09-28T13:07:44Z",
    "elapsed_s": 0,
    "listing_pages": 28,
    "documents_discovered": 6,
@@ -38,8 +38,8 @@
    ],
    "title": "",
    "note": "",
-   "started": "2026-09-28T13:07:20Z",
-   "finished": "2026-09-28T13:07:20Z",
+   "started": "2026-09-28T13:07:44Z",
+   "finished": "2026-09-28T13:07:44Z",
    "elapsed_s": 0,
    "listing_pages": 27,
    "documents_discovered": 8,
@@ -63,8 +63,8 @@
    ],
    "title": "",
    "note": "",
-   "started": "2026-09-28T13:07:20Z",
-   "finished": "2026-09-28T13:07:20Z",
+   "started": "2026-09-28T13:07:44Z",
+   "finished": "2026-09-28T13:07:44Z",
    "elapsed_s": 0,
    "listing_pages": 1,
    "documents_discovered": 42,
@@ -86,24 +86,26 @@
    "entry_urls": [
     "https://dados.cvm.gov.br/dados/",
     "https://dados.cvm.gov.br/dados/ADM_CART/",
-    "https://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/"
+    "https://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/",
+    "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/",
+    "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/"
    ],
    "title": "",
    "note": "",
-   "started": "2026-09-28T13:07:20Z",
-   "finished": "2026-09-28T13:07:21Z",
+   "started": "2026-09-28T13:07:44Z",
+   "finished": "2026-09-28T13:07:44Z",
    "elapsed_s": 0,
-   "listing_pages": 27,
-   "documents_discovered": 1,
+   "listing_pages": 36,
+   "documents_discovered": 18,
    "documents_fetched": 0,
    "documents_bytes": 0,
    "bytes_downloaded_this_run": 0,
    "duplicates": 0,
    "duplicate_bytes_collapsed": 0,
-   "candidate_duplicates": 0,
+   "candidate_duplicates": 23,
    "errors": 0,
    "status_counts": {
-    "dry_run": 1
+    "dry_run": 18
    },
    "dry_run": true
   },
@@ -115,8 +117,8 @@
    ],
    "title": "",
    "note": "",
-   "started": "2026-09-28T13:07:21Z",
-   "finished": "2026-09-28T13:07:21Z",
+   "started": "2026-09-28T13:07:44Z",
+   "finished": "2026-09-28T13:07:44Z",
    "elapsed_s": 0,
    "listing_pages": 1,
    "documents_discovered": 53,
@@ -135,11 +137,11 @@
  ],
  "totals": {
   "sites": 5,
-  "documents_discovered": 110,
+  "documents_discovered": 127,
   "documents_fetched": 0,
   "bytes_downloaded": 0,
   "duplicates_collapsed": 0,
-  "candidate_duplicates": 49,
+  "candidate_duplicates": 72,
   "bytes_saved_by_dedupe": 0,
   "errors": 0
  },
