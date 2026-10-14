@@ -16,3 +16,9 @@ venv/
 # it is ~6 MB of synthetic payloads, so it is not versioned. Regenerate it with:
 #     python3 tests/make_replica.py
 tests/replica/
+
+# Jupyter scratch. NOTE: the .ipynb files in notebooks/ are committed *with*
+# their outputs (tables and rendered figures) on purpose — do not add a
+# nbstripout filter or a "clear output" hook for them. Verify with:
+#     python3 notebooks/run_notebooks.py --check
+.ipynb_checkpoints/

@@ -1,0 +1,16 @@
+# Only needed to *run* the notebooks in this folder -- scraper.py itself uses
+# nothing but the Python standard library.
+#
+#   python3 -m pip install -r notebooks/requirements-notebooks.txt
+#   python3 notebooks/run_notebooks.py
+#
+# Versions are the ones the committed outputs were produced with; anything
+# recent should work.
+
+pandas>=2.0
+matplotlib>=3.6
+numpy>=1.23
+nbformat>=5.9
+nbclient>=0.9
+ipykernel>=6.0
+jinja2>=3.0        # nicer HTML tables in the saved outputs
