@@ -180,6 +180,40 @@ its own listing dialect, deliberate duplicates to exercise every dedup path);
 `tests/replica_server.py` is a stdlib static server with `301 /dir → /dir/`,
 single-range `206` support and an access log the tests assert on.
 
+## Notebooks
+
+`notebooks/` holds six Jupyter notebooks that read the report files and graph
+them. They are committed **with their outputs rendered**, so every figure is
+readable on GitHub without running anything:
+
+```bash
+python3 -m pip install -r notebooks/requirements-notebooks.txt
+python3 notebooks/run_notebooks.py            # execute all six, in place
+python3 notebooks/run_notebooks.py --check    # verify no outputs were stripped
+```
+
+| notebook | question |
+| --- | --- |
+| `00_data_map.ipynb` | what is in this checkout — report files, the two result trees, the audit trail |
+| `01_inventory_explorer.ipynb` | the 127 real published documents: counts, sizes, types, dates |
+| `02_replica_run.ipynb` | what the full run cost, and a line-by-line byte reconciliation |
+| `03_duplicates.ipynb` | which documents are re-publications, and which rows to re-check |
+| `04_audit_health.ipynb` | eight health checks, including re-hashing every stored file |
+| `05_explorer_playground.ipynb` | a scratch pad driven by plain-Python knobs |
+
+The runner never clears outputs. Three things they make explicit that are easy
+to misread from the reports alone:
+
+* `global.json → bytes_downloaded` is the bytes **stored** (5.1 MiB), while the
+  per-site `bytes_downloaded_this_run` is the bytes **on the wire** (5.5 MiB) —
+  the gap is duplicates that had to be fetched before their hash collapsed them.
+* Of the 1.4 MiB of duplicate payload, only **1.0 MiB** was traffic actually
+  avoided (the three PGFN archives, caught by the range probe); 374 KiB was
+  downloaded and then collapsed.
+* Published sizes are **rounded** (`9M`, `3.8M`, `387K`), so six different CVM
+  year-archives share the size `9M`. "Same listed size" is weak evidence for CVM
+  and much stronger for Valiprev.
+
 ## Limits worth knowing
 
 * Listing pages are parsed with regexes for four dialects; anything else falls
